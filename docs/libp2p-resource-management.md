@@ -13,8 +13,10 @@ Good places to start are:
 
 ## Table of Contents
 
-- [libp2p Network Resource Manager <small>(`Swarm.ResourceMgr`)</small>](#libp2p-network-resource-manager-smallswarmresourcemgrsmall)
+- [libp2p Network Resource Manager (`Swarm.ResourceMgr`)](#libp2p-network-resource-manager-swarmresourcemgr)
   - [Purpose](#purpose)
+  - [🙋 Help!  The resource manager is protecting my node but I want to understand more](#-help--the-resource-manager-is-protecting-my-node-but-i-want-to-understand-more)
+  - [Table of Contents](#table-of-contents)
   - [Levels of Configuration](#levels-of-configuration)
     - [Approach](#approach)
     - [Computed Default Limits](#computed-default-limits)
@@ -70,8 +72,7 @@ The reason these scopes are chosen is because:
 
 Within these scopes, limits are just set on
 [memory](https://github.com/libp2p/go-libp2p/tree/master/p2p/host/resource-manager#memory),
-[file descriptors (FD)](https://github.com/libp2p/go-libp2p/tree/master/p2p/host/resource-manager#file-descriptors), [*inbound* connections](https://github.com/libp2p/go-libp2p/tree/master/p2p/host/resource-manager#connections),
-and [*inbound* streams](https://github.com/libp2p/go-libp2p/tree/master/p2p/host/resource-manager#streams).
+[file descriptors (FD)](https://github.com/libp2p/go-libp2p/tree/master/p2p/host/resource-manager#file-descriptors), and [*inbound* connections](https://github.com/libp2p/go-libp2p/tree/master/p2p/host/resource-manager#connections).
 Limits are set based on the `Swarm.ResourceMgr.MaxMemory` and `Swarm.ResourceMgr.MaxFileDescriptors` inputs above.
 
 There are also some special cases where minimum values are enforced.
@@ -88,7 +89,6 @@ Once Kubo has the [Computed Default Limits](#computed-default-limits), it then a
 These become the [active limits](#how-does-one-see-the-active-limits).
 
 While `Swarm.ResourceMgr.Limits` can be edited directly, it is also possible to use `ipfs swarm limit` command to inspect and tweak specific limits at runtime.
-
 
 To see all resources that are close to hitting their respective limit:
 
