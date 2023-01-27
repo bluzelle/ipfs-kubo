@@ -9,8 +9,8 @@ import (
 	filestore "github.com/ipfs/go-filestore"
 	keystore "github.com/ipfs/go-ipfs-keystore"
 
+	config "github.com/bluzelle/ipfs-kubo/config"
 	ds "github.com/ipfs/go-datastore"
-	config "github.com/ipfs/kubo/config"
 	ma "github.com/multiformats/go-multiaddr"
 )
 

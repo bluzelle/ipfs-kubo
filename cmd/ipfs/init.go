@@ -10,18 +10,18 @@ import (
 	"path/filepath"
 	"strings"
 
+	assets "github.com/bluzelle/ipfs-kubo/assets"
+	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
+	core "github.com/bluzelle/ipfs-kubo/core"
+	"github.com/bluzelle/ipfs-kubo/core/commands"
+	fsrepo "github.com/bluzelle/ipfs-kubo/repo/fsrepo"
 	path "github.com/ipfs/go-path"
 	unixfs "github.com/ipfs/go-unixfs"
-	assets "github.com/ipfs/kubo/assets"
-	oldcmds "github.com/ipfs/kubo/commands"
-	core "github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/commands"
-	fsrepo "github.com/ipfs/kubo/repo/fsrepo"
 
+	config "github.com/bluzelle/ipfs-kubo/config"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	"github.com/ipfs/go-libipfs/files"
 	options "github.com/ipfs/interface-go-ipfs-core/options"
-	config "github.com/ipfs/kubo/config"
 )
 
 const (

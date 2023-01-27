@@ -6,15 +6,15 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/bluzelle/ipfs-kubo/config"
 	blockstore "github.com/ipfs/go-ipfs-blockstore"
 	util "github.com/ipfs/go-ipfs-util"
 	"github.com/ipfs/go-log"
-	"github.com/ipfs/kubo/config"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"github.com/ipfs/kubo/core/node/libp2p"
-	"github.com/ipfs/kubo/p2p"
+	"github.com/bluzelle/ipfs-kubo/core/node/libp2p"
+	"github.com/bluzelle/ipfs-kubo/p2p"
 
 	offline "github.com/ipfs/go-ipfs-exchange-offline"
 	uio "github.com/ipfs/go-unixfs/io"

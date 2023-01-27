@@ -39,10 +39,10 @@ import (
 	routing "github.com/libp2p/go-libp2p/core/routing"
 	madns "github.com/multiformats/go-multiaddr-dns"
 
+	"github.com/bluzelle/ipfs-kubo/core"
+	"github.com/bluzelle/ipfs-kubo/core/node"
+	"github.com/bluzelle/ipfs-kubo/repo"
 	"github.com/ipfs/go-namesys"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/node"
-	"github.com/ipfs/kubo/repo"
 )
 
 type CoreAPI struct {

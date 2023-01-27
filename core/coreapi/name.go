@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/bluzelle/ipfs-kubo/tracing"
 	keystore "github.com/ipfs/go-ipfs-keystore"
 	"github.com/ipfs/go-namesys"
-	"github.com/ipfs/kubo/tracing"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 

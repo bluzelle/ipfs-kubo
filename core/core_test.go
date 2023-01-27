@@ -11,19 +11,19 @@ import (
 
 	context "context"
 
+	"github.com/bluzelle/ipfs-kubo/core/node/libp2p"
+	"github.com/bluzelle/ipfs-kubo/repo"
 	"github.com/ipfs/go-cid"
 	"github.com/ipfs/go-delegated-routing/client"
 	"github.com/ipfs/go-ipns"
-	"github.com/ipfs/kubo/core/node/libp2p"
-	"github.com/ipfs/kubo/repo"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	"github.com/stretchr/testify/require"
 
+	config "github.com/bluzelle/ipfs-kubo/config"
 	datastore "github.com/ipfs/go-datastore"
 	syncds "github.com/ipfs/go-datastore/sync"
 	drs "github.com/ipfs/go-delegated-routing/server"
-	config "github.com/ipfs/kubo/config"
 )
 
 func TestInitialization(t *testing.T) {

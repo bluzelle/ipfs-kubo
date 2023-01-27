@@ -9,15 +9,15 @@ import (
 	"strconv"
 	"strings"
 
-	version "github.com/ipfs/kubo"
-	oldcmds "github.com/ipfs/kubo/commands"
-	"github.com/ipfs/kubo/core"
-	corecommands "github.com/ipfs/kubo/core/commands"
+	version "github.com/bluzelle/ipfs-kubo"
+	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
+	"github.com/bluzelle/ipfs-kubo/core"
+	corecommands "github.com/bluzelle/ipfs-kubo/core/commands"
 
+	config "github.com/bluzelle/ipfs-kubo/config"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	cmdsHttp "github.com/ipfs/go-ipfs-cmds/http"
 	path "github.com/ipfs/go-path"
-	config "github.com/ipfs/kubo/config"
 )
 
 var (

@@ -13,8 +13,8 @@ import (
 	"sync"
 	"time"
 
+	version "github.com/bluzelle/ipfs-kubo"
 	"github.com/ipfs/go-log"
-	version "github.com/ipfs/kubo"
 )
 
 const (
