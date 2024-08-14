@@ -10,9 +10,9 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/bluzelle/ipfs-kubo/core"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	humanize "github.com/dustin/go-humanize"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
 
 	bservice "github.com/ipfs/go-blockservice"
 	cid "github.com/ipfs/go-cid"

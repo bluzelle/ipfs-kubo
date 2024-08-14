@@ -9,7 +9,7 @@ on:
 
 jobs:
   golint:
-    if: github.repository == 'ipfs/kubo' || github.event_name == 'workflow_dispatch'
+    if: github.repository == 'bluzelle/ipfs-kubo' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     env:
       TEST_NO_DOCKER: 1

@@ -1,10 +1,10 @@
 package coreunix
 
 import (
+	core "github.com/bluzelle/ipfs-kubo/core"
 	cid "github.com/ipfs/go-cid"
 	dag "github.com/ipfs/go-merkledag"
 	ft "github.com/ipfs/go-unixfs"
-	core "github.com/ipfs/kubo/core"
 )
 
 func AddMetadataTo(n *core.IpfsNode, skey string, m *ft.Metadata) (string, error) {

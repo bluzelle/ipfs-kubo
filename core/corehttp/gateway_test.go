@@ -10,12 +10,13 @@ import (
 	"strings"
 	"testing"
 
+	version "github.com/bluzelle/ipfs-kubo"
+	core "github.com/bluzelle/ipfs-kubo/core"
+	"github.com/bluzelle/ipfs-kubo/core/coreapi"
+	repo "github.com/bluzelle/ipfs-kubo/repo"
 	namesys "github.com/ipfs/go-namesys"
-	version "github.com/ipfs/kubo"
-	core "github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/coreapi"
-	repo "github.com/ipfs/kubo/repo"
 
+	config "github.com/bluzelle/ipfs-kubo/config"
 	datastore "github.com/ipfs/go-datastore"
 	syncds "github.com/ipfs/go-datastore/sync"
 	"github.com/ipfs/go-libipfs/files"
@@ -23,7 +24,6 @@ import (
 	iface "github.com/ipfs/interface-go-ipfs-core"
 	nsopts "github.com/ipfs/interface-go-ipfs-core/options/namesys"
 	ipath "github.com/ipfs/interface-go-ipfs-core/path"
-	config "github.com/ipfs/kubo/config"
 	ci "github.com/libp2p/go-libp2p/core/crypto"
 	id "github.com/libp2p/go-libp2p/p2p/protocol/identify"
 )

@@ -6,8 +6,8 @@ import (
 	"path"
 	"strings"
 
+	"github.com/bluzelle/ipfs-kubo/assets"
 	ipfspath "github.com/ipfs/go-path"
-	"github.com/ipfs/kubo/assets"
 )
 
 // structs for directory listing

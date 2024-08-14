@@ -7,12 +7,12 @@ import (
 	"net/http"
 	"sort"
 
+	version "github.com/bluzelle/ipfs-kubo"
+	core "github.com/bluzelle/ipfs-kubo/core"
+	coreapi "github.com/bluzelle/ipfs-kubo/core/coreapi"
 	coreiface "github.com/ipfs/interface-go-ipfs-core"
 	options "github.com/ipfs/interface-go-ipfs-core/options"
 	path "github.com/ipfs/interface-go-ipfs-core/path"
-	version "github.com/ipfs/kubo"
-	core "github.com/ipfs/kubo/core"
-	coreapi "github.com/ipfs/kubo/core/coreapi"
 	id "github.com/libp2p/go-libp2p/p2p/protocol/identify"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 )

@@ -6,9 +6,9 @@ import (
 	"text/tabwriter"
 	"time"
 
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	humanize "github.com/dustin/go-humanize"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
 
 	"github.com/ipfs/go-ipfs-provider/batched"
 )

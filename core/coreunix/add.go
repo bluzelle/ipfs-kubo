@@ -8,6 +8,7 @@ import (
 	gopath "path"
 	"strconv"
 
+	"github.com/bluzelle/ipfs-kubo/tracing"
 	"github.com/ipfs/go-cid"
 	bstore "github.com/ipfs/go-ipfs-blockstore"
 	chunker "github.com/ipfs/go-ipfs-chunker"
@@ -24,7 +25,6 @@ import (
 	"github.com/ipfs/go-unixfs/importer/trickle"
 	coreiface "github.com/ipfs/interface-go-ipfs-core"
 	"github.com/ipfs/interface-go-ipfs-core/path"
-	"github.com/ipfs/kubo/tracing"
 )
 
 var log = logging.Logger("coreunix")

@@ -17,7 +17,7 @@ jobs:
         id: config
         with:
           script: |
-            if (`${context.repo.owner}/${context.repo.repo}` === 'ipfs/kubo') {
+            if (`${context.repo.owner}/${context.repo.repo}` === 'bluzelle/ipfs-kubo') {
               return {
                 labels: ['self-hosted', 'linux', 'x64', 'kubo'],
                 parallel: 10,

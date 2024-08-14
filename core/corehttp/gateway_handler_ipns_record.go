@@ -45,7 +45,7 @@ func (i *gatewayHandler) serveIpnsRecord(ctx context.Context, w http.ResponseWri
 
 	// Set cache control headers based on the TTL set in the IPNS record. If the
 	// TTL is not present, we use the Last-Modified tag. We are tracking IPNS
-	// caching on: https://github.com/ipfs/kubo/issues/1818.
+	// caching on: https://github.com/bluzelle/ipfs-kubo/issues/1818.
 	// TODO: use addCacheControlHeaders once #1818 is fixed.
 	w.Header().Set("Etag", getEtag(r, resolvedPath.Cid()))
 	if record.Ttl != nil {

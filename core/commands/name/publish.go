@@ -6,13 +6,13 @@ import (
 	"io"
 	"time"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
+	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
+	ke "github.com/bluzelle/ipfs-kubo/core/commands/keyencode"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	iface "github.com/ipfs/interface-go-ipfs-core"
 	options "github.com/ipfs/interface-go-ipfs-core/options"
 	path "github.com/ipfs/interface-go-ipfs-core/path"
-	ke "github.com/ipfs/kubo/core/commands/keyencode"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 )
 

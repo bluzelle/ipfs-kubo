@@ -1,15 +1,15 @@
-module github.com/ipfs/kubo/examples/kubo-as-a-library
+module github.com/bluzelle/ipfs-kubo/examples/kubo-as-a-library
 
 go 1.18
 
 // Used to keep this in sync with the current version of kubo. You should remove
 // this if you copy this example.
-replace github.com/ipfs/kubo => ./../../..
+replace github.com/bluzelle/ipfs-kubo => ./../../..
 
 require (
 	github.com/ipfs/go-libipfs v0.3.0
 	github.com/ipfs/interface-go-ipfs-core v0.10.0
-	github.com/ipfs/kubo v0.0.0-00010101000000-000000000000
+	github.com/bluzelle/ipfs-kubo v0.0.0-00010101000000-000000000000
 	github.com/libp2p/go-libp2p v0.24.2
 	github.com/multiformats/go-multiaddr v0.8.0
 )

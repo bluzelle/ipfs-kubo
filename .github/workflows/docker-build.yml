@@ -9,10 +9,10 @@ on:
 
 jobs:
   docker-build:
-    if: github.repository == 'ipfs/kubo' || github.event_name == 'workflow_dispatch'
+    if: github.repository == 'bluzelle/ipfs-kubo' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: ipfs/kubo
+      IMAGE_NAME: bluzelle/ipfs-kubo
       WIP_IMAGE_TAG: wip
     defaults:
       run:
