@@ -5,8 +5,8 @@ import (
 	"fmt"
 	gopath "path"
 
-	"github.com/bluzelle/ipfs-kubo/tracing"
 	"github.com/ipfs/go-namesys/resolve"
+	"github.com/bluzelle/ipfs-kubo/tracing"
 
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"

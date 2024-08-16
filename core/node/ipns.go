@@ -11,10 +11,10 @@ import (
 	"github.com/libp2p/go-libp2p/core/peerstore"
 	madns "github.com/multiformats/go-multiaddr-dns"
 
-	"github.com/bluzelle/ipfs-kubo/repo"
-	irouting "github.com/bluzelle/ipfs-kubo/routing"
 	"github.com/ipfs/go-namesys"
 	"github.com/ipfs/go-namesys/republisher"
+	"github.com/bluzelle/ipfs-kubo/repo"
+	irouting "github.com/bluzelle/ipfs-kubo/routing"
 )
 
 const DefaultIpnsCacheSize = 128

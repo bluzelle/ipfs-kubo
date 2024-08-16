@@ -9,8 +9,8 @@ import (
 
 	"github.com/bluzelle/ipfs-kubo/thirdparty/assert"
 
-	config "github.com/bluzelle/ipfs-kubo/config"
 	datastore "github.com/ipfs/go-datastore"
+	config "github.com/bluzelle/ipfs-kubo/config"
 )
 
 // swap arg order

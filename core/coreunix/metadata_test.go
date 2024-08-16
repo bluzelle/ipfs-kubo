@@ -6,12 +6,12 @@ import (
 	"io"
 	"testing"
 
-	core "github.com/bluzelle/ipfs-kubo/core"
 	bserv "github.com/ipfs/go-blockservice"
 	merkledag "github.com/ipfs/go-merkledag"
 	ft "github.com/ipfs/go-unixfs"
 	importer "github.com/ipfs/go-unixfs/importer"
 	uio "github.com/ipfs/go-unixfs/io"
+	core "github.com/bluzelle/ipfs-kubo/core"
 
 	cid "github.com/ipfs/go-cid"
 	ds "github.com/ipfs/go-datastore"

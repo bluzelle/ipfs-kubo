@@ -12,6 +12,9 @@ import (
 	"strings"
 	"text/tabwriter"
 
+	cmds "github.com/ipfs/go-ipfs-cmds"
+	keystore "github.com/ipfs/go-ipfs-keystore"
+	options "github.com/ipfs/interface-go-ipfs-core/options"
 	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
 	config "github.com/bluzelle/ipfs-kubo/config"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
@@ -19,9 +22,6 @@ import (
 	ke "github.com/bluzelle/ipfs-kubo/core/commands/keyencode"
 	fsrepo "github.com/bluzelle/ipfs-kubo/repo/fsrepo"
 	migrations "github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations"
-	cmds "github.com/ipfs/go-ipfs-cmds"
-	keystore "github.com/ipfs/go-ipfs-keystore"
-	options "github.com/ipfs/interface-go-ipfs-core/options"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 )

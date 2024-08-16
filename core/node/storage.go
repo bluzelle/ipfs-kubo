@@ -1,15 +1,15 @@
 package node
 
 import (
-	config "github.com/bluzelle/ipfs-kubo/config"
 	"github.com/ipfs/go-datastore"
 	blockstore "github.com/ipfs/go-ipfs-blockstore"
+	config "github.com/bluzelle/ipfs-kubo/config"
 	"go.uber.org/fx"
 
+	"github.com/ipfs/go-filestore"
 	"github.com/bluzelle/ipfs-kubo/core/node/helpers"
 	"github.com/bluzelle/ipfs-kubo/repo"
 	"github.com/bluzelle/ipfs-kubo/thirdparty/verifbs"
-	"github.com/ipfs/go-filestore"
 )
 
 // RepoConfig loads configuration from the repo

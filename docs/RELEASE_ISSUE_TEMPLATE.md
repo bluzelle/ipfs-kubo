@@ -66,7 +66,7 @@ Checklist:
   - [ ] Upgrade to the latest patch release of Go that CircleCI has published (currently used version: `1.19.1`)
     - [ ] See the list here: https://hub.docker.com/r/cimg/go/tags
     - [ ] [ipfs/distributions](https://github.com/ipfs/distributions): bump [this version](https://github.com/ipfs/distributions/blob/master/.tool-versions#L2)
-    - [ ] [bluzelle/ipfs-kubo](https://github.com/bluzelle/ipfs-kubo): [example PR](https://github.com/bluzelle/ipfs-kubo/pull/8599)
+    - [ ] [ipfs/kubo](https://github.com/bluzelle/ipfs-kubo): [example PR](https://github.com/bluzelle/ipfs-kubo/pull/8599)
     - [ ] [ipfs/ipfs-docs](https://github.com/ipfs/ipfs-docs): [example PR](https://github.com/ipfs/ipfs-docs/pull/1298) - only if the major version changed
   - [ ] Fork a new branch (`release-vX.Y.Z`) from `master`.
   - [ ] Bump the version in `version.go` in the `master` branch to `vX.(Y+1).0-dev` via a PR ([example](https://github.com/bluzelle/ipfs-kubo/pull/9305)).
@@ -213,6 +213,6 @@ Checklist:
 
 Would you like to contribute to the IPFS project and don't know how? Well, there are a few places you can get started:
 
-- Check the issues with the `help wanted` label in the [bluzelle/ipfs-kubo repo](https://github.com/bluzelle/ipfs-kubo/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+- Check the issues with the `help wanted` label in the [ipfs/kubo repo](https://github.com/bluzelle/ipfs-kubo/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
 - Join the discussion at [discuss.ipfs.tech](https://discuss.ipfs.tech/) and help users finding their answers.
 - See other options at https://docs.ipfs.tech/community/

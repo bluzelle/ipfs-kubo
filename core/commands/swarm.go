@@ -12,13 +12,13 @@ import (
 	"sync"
 	"time"
 
+	"github.com/ipfs/go-libipfs/files"
 	"github.com/bluzelle/ipfs-kubo/commands"
 	"github.com/bluzelle/ipfs-kubo/config"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/node/libp2p"
 	"github.com/bluzelle/ipfs-kubo/repo"
 	"github.com/bluzelle/ipfs-kubo/repo/fsrepo"
-	"github.com/ipfs/go-libipfs/files"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	inet "github.com/libp2p/go-libp2p/core/network"

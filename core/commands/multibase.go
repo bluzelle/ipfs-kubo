@@ -6,8 +6,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	cmds "github.com/ipfs/go-ipfs-cmds"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	mbase "github.com/multiformats/go-multibase"
 )
 

@@ -6,11 +6,11 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	config "github.com/bluzelle/ipfs-kubo/config"
-	coreapi "github.com/bluzelle/ipfs-kubo/core/coreapi"
 	cid "github.com/ipfs/go-cid"
 	"github.com/ipfs/go-libipfs/files"
 	path "github.com/ipfs/go-path"
+	config "github.com/bluzelle/ipfs-kubo/config"
+	coreapi "github.com/bluzelle/ipfs-kubo/core/coreapi"
 )
 
 func TestToSubdomainURL(t *testing.T) {

@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/bluzelle/ipfs-kubo/tracing"
 	cid "github.com/ipfs/go-cid"
 	blocks "github.com/ipfs/go-libipfs/blocks"
 	coreiface "github.com/ipfs/interface-go-ipfs-core"
 	ipath "github.com/ipfs/interface-go-ipfs-core/path"
+	"github.com/bluzelle/ipfs-kubo/tracing"
 	gocar "github.com/ipld/go-car"
 	selectorparse "github.com/ipld/go-ipld-prime/traversal/selector/parse"
 	"go.opentelemetry.io/otel/attribute"

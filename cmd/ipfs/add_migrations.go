@@ -8,14 +8,14 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/bluzelle/ipfs-kubo/core"
-	"github.com/bluzelle/ipfs-kubo/core/coreapi"
-	"github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations"
-	"github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations/ipfsfetcher"
 	"github.com/ipfs/go-libipfs/files"
 	coreiface "github.com/ipfs/interface-go-ipfs-core"
 	"github.com/ipfs/interface-go-ipfs-core/options"
 	ipath "github.com/ipfs/interface-go-ipfs-core/path"
+	"github.com/bluzelle/ipfs-kubo/core"
+	"github.com/bluzelle/ipfs-kubo/core/coreapi"
+	"github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations"
+	"github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations/ipfsfetcher"
 	"github.com/libp2p/go-libp2p/core/peer"
 )
 

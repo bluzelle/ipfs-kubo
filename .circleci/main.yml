@@ -14,13 +14,13 @@ aliases:
   restore_gomod: &restore_gomod
     restore_cache:
       keys:
-        - v5-dep-{{ .Branch }}-{{ checksum "~/bluzelle/ipfs-kubo/go.sum" }}-{{ .Environment.CIRCLE_JOB }}
-        - v5-dep-{{ .Branch }}-{{ checksum "~/bluzelle/ipfs-kubo/go.sum" }}-
+        - v5-dep-{{ .Branch }}-{{ checksum "~/ipfs/kubo/go.sum" }}-{{ .Environment.CIRCLE_JOB }}
+        - v5-dep-{{ .Branch }}-{{ checksum "~/ipfs/kubo/go.sum" }}-
         - v5-dep-{{ .Branch }}-
         - v5-dep-master-
   store_gomod: &store_gomod
       save_cache:
-        key: v5-dep-{{ .Branch }}-{{ checksum "~/bluzelle/ipfs-kubo/go.sum" }}-{{ .Environment.CIRCLE_JOB }}
+        key: v5-dep-{{ .Branch }}-{{ checksum "~/ipfs/kubo/go.sum" }}-{{ .Environment.CIRCLE_JOB }}
         paths:
           - ~/go/pkg/mod
           - ~/.cache/go-build/
@@ -37,7 +37,7 @@ executors:
   golang:
     docker:
       - image: cimg/go:1.19.1
-    working_directory: ~/bluzelle/ipfs-kubo
+    working_directory: ~/ipfs/kubo
     environment:
       <<: *default_environment
       TEST_NO_DOCKER: 1
@@ -46,13 +46,13 @@ executors:
   node:
     docker:
       - image: circleci/node:14
-    working_directory: ~/bluzelle/ipfs-kubo
+    working_directory: ~/ipfs/kubo
     environment:
       <<: *default_environment
   node-browsers:
     docker:
       - image: circleci/node:16.12.0-browsers
-    working_directory: ~/bluzelle/ipfs-kubo
+    working_directory: ~/ipfs/kubo
     environment:
       <<: *default_environment
       NO_SANDBOX: true
@@ -63,7 +63,7 @@ executors:
     docker:
       - image: cimg/go:1.19.1
     environment:
-      IMAGE_NAME: bluzelle/ipfs-kubo
+      IMAGE_NAME: ipfs/kubo
       WIP_IMAGE_TAG: wip
 
 jobs:
@@ -126,7 +126,7 @@ jobs:
           # restore the go.mod and go.sum files to their original state
           mv go.mod.bak go.mod
           mv go.sum.bak go.sum
-        working_directory: ~/bluzelle/ipfs-kubo/docs/examples/kubo-as-a-library
+        working_directory: ~/ipfs/kubo/docs/examples/kubo-as-a-library
 
     - run:
         when: always
@@ -145,7 +145,7 @@ jobs:
     machine:
         image: ubuntu-2204:2022.10.1
     resource_class: << pipeline.parameters.resource_class >>
-    working_directory: ~/bluzelle/ipfs-kubo
+    working_directory: ~/ipfs/kubo
     environment:
         <<: *default_environment
         TEST_NO_DOCKER: 0
@@ -246,14 +246,14 @@ jobs:
             npm install ipfs@^0.61.0
             npm install ipfs-interop@^8.0.10
             npm install mocha-circleci-reporter@0.0.3
-          working_directory: ~/bluzelle/ipfs-kubo/interop
+          working_directory: ~/ipfs/kubo/interop
       - run:
           name: Running tests
           command: |
             mkdir -p /tmp/test-results/interop/
             export MOCHA_FILE="$(mktemp /tmp/test-results/interop/unit.XXXXXX.xml)"
             npx ipfs-interop -- -t node -f $(sed -n -e "s|^import '\(.*\)'$|test/\1|p" node_modules/ipfs-interop/test/node.js | circleci tests split --split-by=timings) -- --reporter mocha-circleci-reporter
-          working_directory: ~/bluzelle/ipfs-kubo/interop
+          working_directory: ~/ipfs/kubo/interop
           environment:
             LIBP2P_TCP_REUSEPORT: false
             LIBP2P_ALLOW_WEAK_RSA_KEYS: 1
@@ -263,7 +263,7 @@ jobs:
       - save_cache:
           key: v1-interop-{{ .Branch }}-{{ .Revision }}
           paths:
-            - ~/bluzelle/ipfs-kubo/interop/node_modules
+            - ~/ipfs/kubo/interop/node_modules
   go-ipfs-api:
     executor: golang
     steps:
@@ -288,13 +288,13 @@ jobs:
             done
       - restore_cache:
           keys:
-            - v1-go-api-{{ checksum "~/bluzelle/ipfs-kubo/go-ipfs-api/go.sum" }}
+            - v1-go-api-{{ checksum "~/ipfs/kubo/go-ipfs-api/go.sum" }}
             - v1-go-api-
       - run:
           command: go test -count=1 -v ./...
-          working_directory: ~/bluzelle/ipfs-kubo/go-ipfs-api
+          working_directory: ~/ipfs/kubo/go-ipfs-api
       - save_cache:
-          key: v1-go-api-{{ checksum "~/bluzelle/ipfs-kubo/go-ipfs-api/go.sum" }}
+          key: v1-go-api-{{ checksum "~/ipfs/kubo/go-ipfs-api/go.sum" }}
           paths:
             - ~/go/pkg/mod
             - ~/.cache/go-build/
@@ -314,16 +314,16 @@ jobs:
             git -C go-ipfs-http-client log -1
       - restore_cache:
           keys:
-            - v1-http-client-{{ checksum "~/bluzelle/ipfs-kubo/go-ipfs-http-client/go.sum" }}
+            - v1-http-client-{{ checksum "~/ipfs/kubo/go-ipfs-http-client/go.sum" }}
             - v1-http-client-
       - run:
           name: go test -count=1 -v ./...
           command: |
             export PATH=/tmp/circleci-workspace/bin:$PATH
             go test -count=1 -v ./...
-          working_directory: ~/bluzelle/ipfs-kubo/go-ipfs-http-client
+          working_directory: ~/ipfs/kubo/go-ipfs-http-client
       - save_cache:
-          key: v1-http-client-{{ checksum "~/bluzelle/ipfs-kubo/go-ipfs-http-client/go.sum" }}
+          key: v1-http-client-{{ checksum "~/ipfs/kubo/go-ipfs-http-client/go.sum" }}
           paths:
             - ~/go/pkg/mod
             - ~/.cache/go-build/
@@ -343,30 +343,30 @@ jobs:
             git -C ipfs-webui log -1
       - restore_cache:
           keys:
-            - v1-ipfs-webui-{{ checksum "~/bluzelle/ipfs-kubo/ipfs-webui/package-lock.json" }}
+            - v1-ipfs-webui-{{ checksum "~/ipfs/kubo/ipfs-webui/package-lock.json" }}
             - v1-ipfs-webui-
       - run:
           name: Installing dependencies
           command: |
-            npm ci --prefer-offline --no-audit --progress=false --cache ~/bluzelle/ipfs-kubo/.cache/npm
+            npm ci --prefer-offline --no-audit --progress=false --cache ~/ipfs/kubo/.cache/npm
             npx playwright install
-          working_directory: ~/bluzelle/ipfs-kubo/ipfs-webui
+          working_directory: ~/ipfs/kubo/ipfs-webui
       - run:
           name: Run ipfs-webui@main build and smoke-test to confirm the upstream repo is not broken
           command: |
             npm test
-          working_directory: ~/bluzelle/ipfs-kubo/ipfs-webui
+          working_directory: ~/ipfs/kubo/ipfs-webui
       - run:
           name: Test ipfs-webui@main E2E against the locally built Kubo binary
           command: npm run test:e2e
-          working_directory: ~/bluzelle/ipfs-kubo/ipfs-webui
+          working_directory: ~/ipfs/kubo/ipfs-webui
           environment:
             IPFS_GO_EXEC: /tmp/circleci-workspace/bin/ipfs
       - save_cache:
-          key: v1-ipfs-webui-{{ checksum "~/bluzelle/ipfs-kubo/ipfs-webui/package-lock.json" }}
+          key: v1-ipfs-webui-{{ checksum "~/ipfs/kubo/ipfs-webui/package-lock.json" }}
           paths:
             - ~/.cache/ms-playwright
-            - ~/bluzelle/ipfs-kubo/.cache/npm
+            - ~/ipfs/kubo/.cache/npm
   # We only run build as a test here. DockerHub images are built and published
   # by GitHub Action now: https://github.com/bluzelle/ipfs-kubo/pull/8467
   docker-build:

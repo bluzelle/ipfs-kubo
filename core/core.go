@@ -43,6 +43,8 @@ import (
 	ma "github.com/multiformats/go-multiaddr"
 	madns "github.com/multiformats/go-multiaddr-dns"
 
+	"github.com/ipfs/go-namesys"
+	ipnsrp "github.com/ipfs/go-namesys/republisher"
 	"github.com/bluzelle/ipfs-kubo/core/bootstrap"
 	"github.com/bluzelle/ipfs-kubo/core/node"
 	"github.com/bluzelle/ipfs-kubo/core/node/libp2p"
@@ -51,8 +53,6 @@ import (
 	"github.com/bluzelle/ipfs-kubo/peering"
 	"github.com/bluzelle/ipfs-kubo/repo"
 	irouting "github.com/bluzelle/ipfs-kubo/routing"
-	"github.com/ipfs/go-namesys"
-	ipnsrp "github.com/ipfs/go-namesys/republisher"
 )
 
 var log = logging.Logger("core")

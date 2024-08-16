@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"io"
 
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 
 	"github.com/ipfs/interface-go-ipfs-core/options"
 	"github.com/ipfs/interface-go-ipfs-core/path"

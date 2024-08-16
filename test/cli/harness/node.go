@@ -15,9 +15,9 @@ import (
 	"syscall"
 	"time"
 
+	logging "github.com/ipfs/go-log/v2"
 	"github.com/bluzelle/ipfs-kubo/config"
 	serial "github.com/bluzelle/ipfs-kubo/config/serialize"
-	logging "github.com/ipfs/go-log/v2"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"

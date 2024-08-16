@@ -3,7 +3,7 @@
 
 [![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square&cacheSeconds=3600)](https://protocol.ai)
 [![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square&cacheSeconds=3600)](https://godoc.org/github.com/bluzelle/ipfs-kubo)
-[![CircleCI](https://img.shields.io/circleci/build/github/bluzelle/ipfs-kubo?style=flat-square&cacheSeconds=3600)](https://circleci.com/gh/bluzelle/ipfs-kubo)
+[![CircleCI](https://img.shields.io/circleci/build/github/ipfs/kubo?style=flat-square&cacheSeconds=3600)](https://circleci.com/gh/ipfs/kubo)
 
 ## What is Kubo?
 
@@ -109,9 +109,9 @@ If your system is resource-constrained, we recommend:
 
 ### Docker
 
-Official images are published at https://hub.docker.com/r/bluzelle/ipfs-kubo/:
+Official images are published at https://hub.docker.com/r/ipfs/kubo/:
 
-[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/bluzelle/ipfs-kubo?color=blue&label=kubo%20docker%20image&logo=docker&sort=semver&style=flat-square&cacheSeconds=3600)](https://hub.docker.com/r/bluzelle/ipfs-kubo/)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/ipfs/kubo?color=blue&label=kubo%20docker%20image&logo=docker&sort=semver&style=flat-square&cacheSeconds=3600)](https://hub.docker.com/r/ipfs/kubo/)
 
 More info on how to run Kubo (go-ipfs) inside Docker can be found [here](https://docs.ipfs.tech/how-to/run-ipfs-inside-docker/).
 
@@ -119,7 +119,7 @@ More info on how to run Kubo (go-ipfs) inside Docker can be found [here](https:/
 
 The official binaries are published at https://dist.ipfs.tech#kubo:
 
-[![dist.ipfs.tech Downloads](https://img.shields.io/github/v/release/bluzelle/ipfs-kubo?label=dist.ipfs.tech&logo=ipfs&style=flat-square&cacheSeconds=3600)](https://dist.ipfs.tech#kubo)
+[![dist.ipfs.tech Downloads](https://img.shields.io/github/v/release/ipfs/kubo?label=dist.ipfs.tech&logo=ipfs&style=flat-square&cacheSeconds=3600)](https://dist.ipfs.tech#kubo)
 
 From there:
 - Click the blue "Download Kubo" on the right side of the page.
@@ -267,7 +267,7 @@ $ brew install --formula ipfs
 
 ### Build from Source
 
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/bluzelle/ipfs-kubo?label=Requires%20Go&logo=go&style=flat-square&cacheSeconds=3600)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/ipfs/kubo?label=Requires%20Go&logo=go&style=flat-square&cacheSeconds=3600)
 
 kubo's build system requires Go and some standard POSIX build tools:
 
@@ -279,7 +279,7 @@ To build without GCC, build with `CGO_ENABLED=0` (e.g., `make build CGO_ENABLED=
 
 #### Install Go
 
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/bluzelle/ipfs-kubo?label=Requires%20Go&logo=go&style=flat-square&cacheSeconds=3600)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/ipfs/kubo?label=Requires%20Go&logo=go&style=flat-square&cacheSeconds=3600)
 
 If you need to update: [Download latest version of Go](https://golang.org/dl/).
 
