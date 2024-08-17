@@ -12,9 +12,9 @@ import (
 	"github.com/ipld/go-ipld-prime/multicodec"
 	basicnode "github.com/ipld/go-ipld-prime/node/basic"
 
+	"github.com/ipfs/boxo/files"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
-	"github.com/ipfs/go-libipfs/files"
 	mc "github.com/multiformats/go-multicodec"
 
 	// Expected minimal set of available format/ienc codecs.

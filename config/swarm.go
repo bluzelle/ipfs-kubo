@@ -1,7 +1,5 @@
 package config
 
-import rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
-
 type SwarmConfig struct {
 	// AddrFilters specifies a set libp2p addresses that we should never
 	// dial or receive connections from.
@@ -100,12 +98,13 @@ type Transports struct {
 	// listen on a transport, add the transport to your Addresses.Swarm.
 	Network struct {
 		// All default to on.
-		QUIC      Flag `json:",omitempty"`
-		TCP       Flag `json:",omitempty"`
-		Websocket Flag `json:",omitempty"`
-		Relay     Flag `json:",omitempty"`
-		// except WebTransport which is experimental and optin.
+		QUIC         Flag `json:",omitempty"`
+		TCP          Flag `json:",omitempty"`
+		Websocket    Flag `json:",omitempty"`
+		Relay        Flag `json:",omitempty"`
 		WebTransport Flag `json:",omitempty"`
+		// except WebRTCDirect which is experimental and opt-in.
+		WebRTCDirect Flag `json:",omitempty"`
 	}
 
 	// Security specifies the transports used to encrypt insecure network
@@ -124,12 +123,12 @@ type Transports struct {
 	Multiplexers struct {
 		// Defaults to 100.
 		Yamux Priority `json:",omitempty"`
-		// Defaults to 200.
+		// Defaults to -1.
 		Mplex Priority `json:",omitempty"`
 	}
 }
 
-// ConnMgr defines configuration options for the libp2p connection manager
+// ConnMgr defines configuration options for the libp2p connection manager.
 type ConnMgr struct {
 	Type        *OptionalString   `json:",omitempty"`
 	LowWater    *OptionalInteger  `json:",omitempty"`
@@ -141,8 +140,8 @@ type ConnMgr struct {
 // <https://github.com/libp2p/go-libp2p/tree/master/p2p/host/resource-manager#readme>
 type ResourceMgr struct {
 	// Enables the Network Resource Manager feature, default to on.
-	Enabled Flag               `json:",omitempty"`
-	Limits  *rcmgr.LimitConfig `json:",omitempty"`
+	Enabled Flag        `json:",omitempty"`
+	Limits  swarmLimits `json:",omitempty"`
 
 	MaxMemory          *OptionalString  `json:",omitempty"`
 	MaxFileDescriptors *OptionalInteger `json:",omitempty"`

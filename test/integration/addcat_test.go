@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ipfs/go-libipfs/files"
+	"github.com/ipfs/boxo/bootstrap"
+	"github.com/ipfs/boxo/files"
 	logging "github.com/ipfs/go-log"
 	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/bootstrap"
 	"github.com/ipfs/kubo/core/coreapi"
 	mock "github.com/ipfs/kubo/core/mock"
 	"github.com/ipfs/kubo/thirdparty/unit"

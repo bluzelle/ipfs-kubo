@@ -8,13 +8,17 @@ import (
 	"os"
 	"path/filepath"
 	"regexp"
+	"strconv"
+	"strings"
 	"testing"
 
 	"github.com/ipfs/kubo/config"
 	"github.com/ipfs/kubo/test/cli/harness"
 	. "github.com/ipfs/kubo/test/cli/testutils"
+	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/multiformats/go-multiaddr"
 	manet "github.com/multiformats/go-multiaddr/net"
+	"github.com/multiformats/go-multibase"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -25,10 +29,13 @@ func TestGateway(t *testing.T) {
 	node := h.NewNode().Init().StartDaemon("--offline")
 	cid := node.IPFSAddStr("Hello Worlds!")
 
+	peerID, err := peer.ToCid(node.PeerID()).StringOfBase(multibase.Base36)
+	assert.NoError(t, err)
+
 	client := node.GatewayClient()
 	client.TemplateData = map[string]string{
 		"CID":    cid,
-		"PeerID": node.PeerID().String(),
+		"PeerID": peerID,
 	}
 
 	t.Run("GET IPFS path succeeds", func(t *testing.T) {
@@ -164,12 +171,12 @@ func TestGateway(t *testing.T) {
 
 	t.Run("IPNS", func(t *testing.T) {
 		t.Parallel()
-		node.IPFS("name", "publish", "--allow-offline", cid)
+		node.IPFS("name", "publish", "--allow-offline", "--ttl", "42h", cid)
 
-		t.Run("GET invalid IPNS root returns 400 (Bad Request)", func(t *testing.T) {
+		t.Run("GET invalid IPNS root returns 500 (Internal Server Error)", func(t *testing.T) {
 			t.Parallel()
 			resp := client.Get("/ipns/QmInvalid/pleaseDontAddMe")
-			assert.Equal(t, 400, resp.StatusCode)
+			assert.Equal(t, 500, resp.StatusCode)
 		})
 
 		t.Run("GET IPNS path succeeds", func(t *testing.T) {
@@ -179,10 +186,21 @@ func TestGateway(t *testing.T) {
 			assert.Equal(t, "Hello Worlds!", resp.Body)
 		})
 
+		t.Run("GET IPNS path has correct Cache-Control", func(t *testing.T) {
+			t.Parallel()
+			resp := client.Get("/ipns/{{.PeerID}}")
+			assert.Equal(t, 200, resp.StatusCode)
+			cacheControl := resp.Headers.Get("Cache-Control")
+			assert.True(t, strings.HasPrefix(cacheControl, "public, max-age="))
+			maxAge, err := strconv.Atoi(strings.TrimPrefix(cacheControl, "public, max-age="))
+			assert.NoError(t, err)
+			assert.True(t, maxAge-151200 < 60) // MaxAge within 42h and 42h-1m
+		})
+
 		t.Run("GET /ipfs/ipns/{peerid} returns redirect to the valid path", func(t *testing.T) {
 			t.Parallel()
 			resp := client.Get("/ipfs/ipns/{{.PeerID}}?query=to-remember")
-			peerID := node.PeerID().String()
+
 			assert.Contains(t,
 				resp.Body,
 				fmt.Sprintf(`<meta http-equiv="refresh" content="10;url=/ipns/%s?query=to-remember" />`, peerID),
@@ -191,9 +209,7 @@ func TestGateway(t *testing.T) {
 				resp.Body,
 				fmt.Sprintf(`<link rel="canonical" href="/ipns/%s?query=to-remember" />`, peerID),
 			)
-
 		})
-
 	})
 
 	t.Run("GET invalid IPFS path errors", func(t *testing.T) {
@@ -216,6 +232,23 @@ func TestGateway(t *testing.T) {
 	t.Run("GET /webui/ returns 301 or 302", func(t *testing.T) {
 		t.Parallel()
 		resp := node.APIClient().DisableRedirects().Get("/webui/")
+		assert.Contains(t, []int{302, 301}, resp.StatusCode)
+	})
+
+	t.Run("GET /webui/ returns user-specified headers", func(t *testing.T) {
+		t.Parallel()
+
+		header := "Access-Control-Allow-Origin"
+		values := []string{"http://localhost:3000", "https://webui.ipfs.io"}
+
+		node := harness.NewT(t).NewNode().Init()
+		node.UpdateConfig(func(cfg *config.Config) {
+			cfg.API.HTTPHeaders = map[string][]string{header: values}
+		})
+		node.StartDaemon()
+
+		resp := node.APIClient().DisableRedirects().Get("/webui/")
+		assert.Equal(t, resp.Headers.Values(header), values)
 		assert.Contains(t, []int{302, 301}, resp.StatusCode)
 	})
 
@@ -388,9 +421,9 @@ func TestGateway(t *testing.T) {
 		t.Parallel()
 		gatewayAddr := URLStrToMultiaddr(node.GatewayURL())
 		res := node.RunIPFS("--api", gatewayAddr.String(), "refs", "local")
-		assert.Equal(t,
-			`Error: invalid path "local": selected encoding not supported`,
+		assert.Contains(t,
 			res.Stderr.Trimmed(),
+			`Error: invalid path "local":`,
 		)
 	})
 
@@ -419,7 +452,7 @@ func TestGateway(t *testing.T) {
 
 	t.Run("verify gateway file", func(t *testing.T) {
 		t.Parallel()
-		r := regexp.MustCompile(`Gateway \(readonly\) server listening on (?P<addr>.+)\s`)
+		r := regexp.MustCompile(`Gateway server listening on (?P<addr>.+)\s`)
 		matches := r.FindStringSubmatch(node.Daemon.Stdout.String())
 		ma, err := multiaddr.NewMultiaddr(matches[1])
 		require.NoError(t, err)
@@ -457,6 +490,9 @@ func TestGateway(t *testing.T) {
 			cfg.Gateway.NoFetch = true
 		})
 
+		node2PeerID, err := peer.ToCid(node2.PeerID()).StringOfBase(multibase.Base36)
+		assert.NoError(t, err)
+
 		nodes.StartDaemons().Connect()
 
 		t.Run("not present", func(t *testing.T) {
@@ -464,12 +500,12 @@ func TestGateway(t *testing.T) {
 
 			t.Run("not present key from node 1", func(t *testing.T) {
 				t.Parallel()
-				assert.Equal(t, 404, node1.GatewayClient().Get("/ipfs/"+cidFoo).StatusCode)
+				assert.Equal(t, 500, node1.GatewayClient().Get("/ipfs/"+cidFoo).StatusCode)
 			})
 
 			t.Run("not present IPNS key from node 1", func(t *testing.T) {
 				t.Parallel()
-				assert.Equal(t, 400, node1.GatewayClient().Get("/ipns/"+node2.PeerID().String()).StatusCode)
+				assert.Equal(t, 500, node1.GatewayClient().Get("/ipns/"+node2PeerID).StatusCode)
 			})
 		})
 
@@ -484,9 +520,125 @@ func TestGateway(t *testing.T) {
 			t.Run("present IPNS key from node 1", func(t *testing.T) {
 				t.Parallel()
 				node2.IPFS("name", "publish", "/ipfs/"+cidBar)
-				assert.Equal(t, 200, node1.GatewayClient().Get("/ipns/"+node2.PeerID().String()).StatusCode)
-
+				assert.Equal(t, 200, node1.GatewayClient().Get("/ipns/"+node2PeerID).StatusCode)
 			})
+		})
+	})
+
+	t.Run("DeserializedResponses", func(t *testing.T) {
+		type testCase struct {
+			globalValue                   config.Flag
+			gatewayValue                  config.Flag
+			deserializedGlobalStatusCode  int
+			deserializedGatewayStaticCode int
+			message                       string
+		}
+
+		setHost := func(r *http.Request) {
+			r.Host = "example.com"
+		}
+
+		withAccept := func(accept string) func(r *http.Request) {
+			return func(r *http.Request) {
+				r.Header.Set("Accept", accept)
+			}
+		}
+
+		withHostAndAccept := func(accept string) func(r *http.Request) {
+			return func(r *http.Request) {
+				setHost(r)
+				withAccept(accept)(r)
+			}
+		}
+
+		makeTest := func(test *testCase) func(t *testing.T) {
+			return func(t *testing.T) {
+				t.Parallel()
+
+				node := harness.NewT(t).NewNode().Init()
+				node.UpdateConfig(func(cfg *config.Config) {
+					cfg.Gateway.DeserializedResponses = test.globalValue
+					cfg.Gateway.PublicGateways = map[string]*config.GatewaySpec{
+						"example.com": {
+							Paths:                 []string{"/ipfs", "/ipns"},
+							DeserializedResponses: test.gatewayValue,
+						},
+					}
+				})
+				node.StartDaemon()
+
+				cidFoo := node.IPFSAddStr("foo")
+				client := node.GatewayClient()
+
+				deserializedPath := "/ipfs/" + cidFoo
+
+				blockPath := deserializedPath + "?format=raw"
+				carPath := deserializedPath + "?format=car"
+
+				// Global Check (Gateway.DeserializedResponses)
+				assert.Equal(t, http.StatusOK, client.Get(blockPath).StatusCode)
+				assert.Equal(t, http.StatusOK, client.Get(deserializedPath, withAccept("application/vnd.ipld.raw")).StatusCode)
+
+				assert.Equal(t, http.StatusOK, client.Get(carPath).StatusCode)
+				assert.Equal(t, http.StatusOK, client.Get(deserializedPath, withAccept("application/vnd.ipld.car")).StatusCode)
+
+				assert.Equal(t, test.deserializedGlobalStatusCode, client.Get(deserializedPath).StatusCode)
+				assert.Equal(t, test.deserializedGlobalStatusCode, client.Get(deserializedPath, withAccept("application/json")).StatusCode)
+
+				// Public Gateway (example.com) Check (Gateway.PublicGateways[example.com].DeserializedResponses)
+				assert.Equal(t, http.StatusOK, client.Get(blockPath, setHost).StatusCode)
+				assert.Equal(t, http.StatusOK, client.Get(deserializedPath, withHostAndAccept("application/vnd.ipld.raw")).StatusCode)
+
+				assert.Equal(t, http.StatusOK, client.Get(carPath, setHost).StatusCode)
+				assert.Equal(t, http.StatusOK, client.Get(deserializedPath, withHostAndAccept("application/vnd.ipld.car")).StatusCode)
+
+				assert.Equal(t, test.deserializedGatewayStaticCode, client.Get(deserializedPath, setHost).StatusCode)
+				assert.Equal(t, test.deserializedGatewayStaticCode, client.Get(deserializedPath, withHostAndAccept("application/json")).StatusCode)
+			}
+		}
+
+		for _, test := range []*testCase{
+			{config.True, config.Default, http.StatusOK, http.StatusOK, "when Gateway.DeserializedResponses is globally enabled, leaving implicit default for Gateway.PublicGateways[example.com] should inherit the global setting (enabled)"},
+			{config.False, config.Default, http.StatusNotAcceptable, http.StatusNotAcceptable, "when Gateway.DeserializedResponses is globally disabled, leaving implicit default on Gateway.PublicGateways[example.com] should inherit the global setting (disabled)"},
+			{config.False, config.True, http.StatusNotAcceptable, http.StatusOK, "when Gateway.DeserializedResponses is globally disabled, explicitly enabling on Gateway.PublicGateways[example.com] should override global (enabled)"},
+			{config.True, config.False, http.StatusOK, http.StatusNotAcceptable, "when Gateway.DeserializedResponses is globally enabled, explicitly disabling on Gateway.PublicGateways[example.com] should override global (disabled)"},
+		} {
+			t.Run(test.message, makeTest(test))
+		}
+	})
+
+	t.Run("DisableHTMLErrors", func(t *testing.T) {
+		t.Parallel()
+
+		t.Run("Returns HTML error without DisableHTMLErrors, Accept contains text/html", func(t *testing.T) {
+			t.Parallel()
+
+			node := harness.NewT(t).NewNode().Init()
+			node.StartDaemon()
+			client := node.GatewayClient()
+
+			res := client.Get("/ipfs/invalid-thing", func(r *http.Request) {
+				r.Header.Set("Accept", "text/html")
+			})
+			assert.NotEqual(t, http.StatusOK, res.StatusCode)
+			assert.Contains(t, res.Resp.Header.Get("Content-Type"), "text/html")
+		})
+
+		t.Run("Does not return HTML error with DisableHTMLErrors enabled, and Accept contains text/html", func(t *testing.T) {
+			t.Parallel()
+
+			node := harness.NewT(t).NewNode().Init()
+			node.UpdateConfig(func(cfg *config.Config) {
+				cfg.Gateway.DisableHTMLErrors = config.True
+			})
+			node.StartDaemon()
+			client := node.GatewayClient()
+
+			res := client.Get("/ipfs/invalid-thing", func(r *http.Request) {
+				r.Header.Set("Accept", "text/html")
+			})
+			assert.NotEqual(t, http.StatusOK, res.StatusCode)
+			assert.NotContains(t, res.Resp.Header.Get("Content-Type"), "text/html")
 		})
 	})
 }

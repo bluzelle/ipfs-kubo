@@ -7,7 +7,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/ipfs/interface-go-ipfs-core/options"
+	"github.com/ipfs/boxo/coreiface/options"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/libp2p/go-libp2p/core/peer"
 )
@@ -65,15 +65,10 @@ func InitWithIdentity(identity Identity) (*Config, error) {
 
 		Gateway: Gateway{
 			RootRedirect: "",
-			Writable:     false,
 			NoFetch:      false,
 			PathPrefixes: []string{},
-			HTTPHeaders: map[string][]string{
-				"Access-Control-Allow-Origin":  {"*"},
-				"Access-Control-Allow-Methods": {"GET"},
-				"Access-Control-Allow-Headers": {"X-Requested-With", "Range", "User-Agent"},
-			},
-			APICommands: []string{},
+			HTTPHeaders:  map[string][]string{},
+			APICommands:  []string{},
 		},
 		Reprovider: Reprovider{
 			Interval: nil,
@@ -95,15 +90,15 @@ func InitWithIdentity(identity Identity) (*Config, error) {
 }
 
 // DefaultConnMgrHighWater is the default value for the connection managers
-// 'high water' mark
+// 'high water' mark.
 const DefaultConnMgrHighWater = 96
 
 // DefaultConnMgrLowWater is the default value for the connection managers 'low
-// water' mark
+// water' mark.
 const DefaultConnMgrLowWater = 32
 
 // DefaultConnMgrGracePeriod is the default value for the connection managers
-// grace period
+// grace period.
 const DefaultConnMgrGracePeriod = time.Second * 20
 
 // DefaultConnMgrType is the default value for the connection managers
@@ -119,10 +114,8 @@ func addressesConfig() Addresses {
 		Swarm: []string{
 			"/ip4/0.0.0.0/tcp/4001",
 			"/ip6/::/tcp/4001",
-			"/ip4/0.0.0.0/udp/4001/quic",
 			"/ip4/0.0.0.0/udp/4001/quic-v1",
 			"/ip4/0.0.0.0/udp/4001/quic-v1/webtransport",
-			"/ip6/::/udp/4001/quic",
 			"/ip6/::/udp/4001/quic-v1",
 			"/ip6/::/udp/4001/quic-v1/webtransport",
 		},
@@ -244,7 +237,7 @@ func CreateIdentity(out io.Writer, opts []options.KeyGenerateOption) (Identity, 
 	if err != nil {
 		return ident, err
 	}
-	ident.PeerID = id.Pretty()
+	ident.PeerID = id.String()
 	fmt.Fprintf(out, "peer identity: %s\n", ident.PeerID)
 	return ident, nil
 }
