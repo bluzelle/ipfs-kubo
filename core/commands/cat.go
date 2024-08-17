@@ -9,9 +9,9 @@ import (
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
+	iface "github.com/bluzelle/boxo/coreiface"
+	"github.com/bluzelle/boxo/files"
 	"github.com/cheggaaa/pb"
-	iface "github.com/ipfs/boxo/coreiface"
-	"github.com/ipfs/boxo/files"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 

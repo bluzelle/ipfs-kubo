@@ -5,8 +5,8 @@ import (
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 
-	coreiface "github.com/ipfs/boxo/coreiface"
-	"github.com/ipfs/boxo/path"
+	coreiface "github.com/bluzelle/boxo/coreiface"
+	"github.com/bluzelle/boxo/path"
 	"github.com/ipfs/go-cid"
 )
 

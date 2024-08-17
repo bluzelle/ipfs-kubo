@@ -6,9 +6,9 @@ import (
 	"io"
 	"strings"
 
-	iface "github.com/ipfs/boxo/coreiface"
-	caopts "github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/path"
+	iface "github.com/bluzelle/boxo/coreiface"
+	caopts "github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/path"
 	"github.com/ipfs/go-cid"
 	"github.com/pkg/errors"
 )

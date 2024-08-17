@@ -7,14 +7,14 @@ import (
 	"strings"
 	"time"
 
-	ns "github.com/ipfs/boxo/namesys"
-	cidenc "github.com/ipfs/go-cidutil/cidenc"
+	ns "github.com/bluzelle/boxo/namesys"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 	ncmd "github.com/bluzelle/ipfs-kubo/core/commands/name"
+	cidenc "github.com/ipfs/go-cidutil/cidenc"
 
-	options "github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/path"
+	options "github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/path"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 

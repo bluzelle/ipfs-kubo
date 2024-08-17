@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	merkledag "github.com/ipfs/boxo/ipld/merkledag"
-	ipld "github.com/ipfs/go-ipld-format"
+	merkledag "github.com/bluzelle/boxo/ipld/merkledag"
 	config "github.com/bluzelle/ipfs-kubo/config"
+	ipld "github.com/ipfs/go-ipld-format"
 	"github.com/libp2p/go-libp2p/core/host"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 )

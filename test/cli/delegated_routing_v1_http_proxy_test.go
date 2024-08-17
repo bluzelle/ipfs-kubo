@@ -3,7 +3,7 @@ package cli
 import (
 	"testing"
 
-	"github.com/ipfs/boxo/ipns"
+	"github.com/bluzelle/boxo/ipns"
 	"github.com/bluzelle/ipfs-kubo/config"
 	"github.com/bluzelle/ipfs-kubo/test/cli/harness"
 	"github.com/bluzelle/ipfs-kubo/test/cli/testutils"

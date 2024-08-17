@@ -3,8 +3,8 @@ package coreapi
 import (
 	"context"
 
-	dag "github.com/ipfs/boxo/ipld/merkledag"
-	pin "github.com/ipfs/boxo/pinning/pinner"
+	dag "github.com/bluzelle/boxo/ipld/merkledag"
+	pin "github.com/bluzelle/boxo/pinning/pinner"
 	cid "github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
 	"go.opentelemetry.io/otel/attribute"

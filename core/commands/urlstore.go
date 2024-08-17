@@ -5,11 +5,11 @@ import (
 	"io"
 	"net/url"
 
-	filestore "github.com/ipfs/boxo/filestore"
+	filestore "github.com/bluzelle/boxo/filestore"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
-	"github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/files"
+	"github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/files"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 

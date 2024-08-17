@@ -18,8 +18,8 @@ import (
 	corehttp "github.com/bluzelle/ipfs-kubo/core/corehttp"
 	fsrepo "github.com/bluzelle/ipfs-kubo/repo/fsrepo"
 
+	"github.com/bluzelle/boxo/files"
 	fsnotify "github.com/fsnotify/fsnotify"
-	"github.com/ipfs/boxo/files"
 	process "github.com/jbenet/goprocess"
 	homedir "github.com/mitchellh/go-homedir"
 )

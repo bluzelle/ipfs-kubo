@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"io"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 
-	"github.com/ipfs/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/coreiface/options"
 )
 
 var ObjectPatchCmd = &cmds.Command{

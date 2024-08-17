@@ -6,12 +6,12 @@ import (
 	"io"
 	"net"
 
-	filestore "github.com/ipfs/boxo/filestore"
-	keystore "github.com/ipfs/boxo/keystore"
+	filestore "github.com/bluzelle/boxo/filestore"
+	keystore "github.com/bluzelle/boxo/keystore"
 	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
 
-	ds "github.com/ipfs/go-datastore"
 	config "github.com/bluzelle/ipfs-kubo/config"
+	ds "github.com/ipfs/go-datastore"
 	ma "github.com/multiformats/go-multiaddr"
 )
 

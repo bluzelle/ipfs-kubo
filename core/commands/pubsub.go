@@ -11,7 +11,7 @@ import (
 	mbase "github.com/multiformats/go-multibase"
 	"github.com/pkg/errors"
 
-	options "github.com/ipfs/boxo/coreiface/options"
+	options "github.com/bluzelle/boxo/coreiface/options"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 

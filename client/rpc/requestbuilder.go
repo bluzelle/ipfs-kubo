@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/blang/semver/v4"
-	"github.com/ipfs/boxo/files"
+	"github.com/bluzelle/boxo/files"
 )
 
 type RequestBuilder interface {

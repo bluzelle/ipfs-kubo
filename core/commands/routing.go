@@ -11,10 +11,10 @@ import (
 
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
-	iface "github.com/ipfs/boxo/coreiface"
-	"github.com/ipfs/boxo/coreiface/options"
-	dag "github.com/ipfs/boxo/ipld/merkledag"
-	"github.com/ipfs/boxo/ipns"
+	iface "github.com/bluzelle/boxo/coreiface"
+	"github.com/bluzelle/boxo/coreiface/options"
+	dag "github.com/bluzelle/boxo/ipld/merkledag"
+	"github.com/bluzelle/boxo/ipns"
 	cid "github.com/ipfs/go-cid"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"

@@ -10,10 +10,10 @@ import (
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
-	iface "github.com/ipfs/boxo/coreiface"
-	options "github.com/ipfs/boxo/coreiface/options"
-	unixfs "github.com/ipfs/boxo/ipld/unixfs"
-	unixfs_pb "github.com/ipfs/boxo/ipld/unixfs/pb"
+	iface "github.com/bluzelle/boxo/coreiface"
+	options "github.com/bluzelle/boxo/coreiface/options"
+	unixfs "github.com/bluzelle/boxo/ipld/unixfs"
+	unixfs_pb "github.com/bluzelle/boxo/ipld/unixfs/pb"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 

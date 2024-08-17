@@ -9,11 +9,11 @@ import (
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
-	iface "github.com/ipfs/boxo/coreiface"
-	options "github.com/ipfs/boxo/coreiface/options"
-	ipns "github.com/ipfs/boxo/ipns"
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	iface "github.com/bluzelle/boxo/coreiface"
+	options "github.com/bluzelle/boxo/coreiface/options"
+	ipns "github.com/bluzelle/boxo/ipns"
 	ke "github.com/bluzelle/ipfs-kubo/core/commands/keyencode"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 var errAllowOffline = errors.New("can't publish while offline: pass `--allow-offline` to override")

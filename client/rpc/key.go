@@ -4,10 +4,10 @@ import (
 	"context"
 	"errors"
 
-	iface "github.com/ipfs/boxo/coreiface"
-	caopts "github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/ipns"
-	"github.com/ipfs/boxo/path"
+	iface "github.com/bluzelle/boxo/coreiface"
+	caopts "github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/ipns"
+	"github.com/bluzelle/boxo/path"
 	"github.com/libp2p/go-libp2p/core/peer"
 )
 

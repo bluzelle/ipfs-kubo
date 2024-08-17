@@ -5,15 +5,15 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ipfs/boxo/namesys"
+	"github.com/bluzelle/boxo/namesys"
 	"github.com/bluzelle/ipfs-kubo/tracing"
 
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	coreiface "github.com/ipfs/boxo/coreiface"
-	"github.com/ipfs/boxo/path"
-	ipfspathresolver "github.com/ipfs/boxo/path/resolver"
+	coreiface "github.com/bluzelle/boxo/coreiface"
+	"github.com/bluzelle/boxo/path"
+	ipfspathresolver "github.com/bluzelle/boxo/path/resolver"
 	ipld "github.com/ipfs/go-ipld-format"
 )
 

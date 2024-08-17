@@ -171,4 +171,4 @@ Default: disabled (not set)
 
 # Tracing
 
-For tracing configuration, please check: https://github.com/ipfs/boxo/blob/main/docs/tracing.md
+For tracing configuration, please check: https://github.com/bluzelle/boxo/blob/main/docs/tracing.md

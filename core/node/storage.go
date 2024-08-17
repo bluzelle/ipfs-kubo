@@ -1,12 +1,12 @@
 package node
 
 import (
-	blockstore "github.com/ipfs/boxo/blockstore"
-	"github.com/ipfs/go-datastore"
+	blockstore "github.com/bluzelle/boxo/blockstore"
 	config "github.com/bluzelle/ipfs-kubo/config"
+	"github.com/ipfs/go-datastore"
 	"go.uber.org/fx"
 
-	"github.com/ipfs/boxo/filestore"
+	"github.com/bluzelle/boxo/filestore"
 	"github.com/bluzelle/ipfs-kubo/core/node/helpers"
 	"github.com/bluzelle/ipfs-kubo/repo"
 	"github.com/bluzelle/ipfs-kubo/thirdparty/verifbs"

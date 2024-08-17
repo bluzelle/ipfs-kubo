@@ -3,7 +3,7 @@ package cmdenv
 import (
 	"fmt"
 
-	"github.com/ipfs/boxo/files"
+	"github.com/bluzelle/boxo/files"
 )
 
 // GetFileArg returns the next file from the directory or an error

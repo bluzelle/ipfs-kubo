@@ -10,7 +10,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/ipfs/boxo/files"
+	"github.com/bluzelle/boxo/files"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	cmdhttp "github.com/ipfs/go-ipfs-cmds/http"
 )

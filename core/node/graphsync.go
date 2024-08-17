@@ -1,7 +1,7 @@
 package node
 
 import (
-	blockstore "github.com/ipfs/boxo/blockstore"
+	blockstore "github.com/bluzelle/boxo/blockstore"
 	"github.com/ipfs/go-graphsync"
 	gsimpl "github.com/ipfs/go-graphsync/impl"
 	"github.com/ipfs/go-graphsync/network"

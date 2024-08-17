@@ -10,12 +10,12 @@ import (
 
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
+	coreiface "github.com/bluzelle/boxo/coreiface"
+	"github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/files"
+	mfs "github.com/bluzelle/boxo/mfs"
+	"github.com/bluzelle/boxo/path"
 	"github.com/cheggaaa/pb"
-	coreiface "github.com/ipfs/boxo/coreiface"
-	"github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/files"
-	mfs "github.com/ipfs/boxo/mfs"
-	"github.com/ipfs/boxo/path"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
 	mh "github.com/multiformats/go-multihash"

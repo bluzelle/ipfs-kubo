@@ -10,11 +10,11 @@ import (
 	coreapi "github.com/bluzelle/ipfs-kubo/core/coreapi"
 	loader "github.com/bluzelle/ipfs-kubo/plugin/loader"
 
-	coreiface "github.com/ipfs/boxo/coreiface"
-	options "github.com/ipfs/boxo/coreiface/options"
+	coreiface "github.com/bluzelle/boxo/coreiface"
+	options "github.com/bluzelle/boxo/coreiface/options"
+	config "github.com/bluzelle/ipfs-kubo/config"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
-	config "github.com/bluzelle/ipfs-kubo/config"
 )
 
 var log = logging.Logger("command")

@@ -15,9 +15,9 @@ import (
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 	"github.com/bluzelle/ipfs-kubo/core/commands/e"
 
+	"github.com/bluzelle/boxo/files"
+	"github.com/bluzelle/boxo/tar"
 	"github.com/cheggaaa/pb"
-	"github.com/ipfs/boxo/files"
-	"github.com/ipfs/boxo/tar"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 

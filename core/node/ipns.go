@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ipfs/boxo/ipns"
-	util "github.com/ipfs/boxo/util"
+	"github.com/bluzelle/boxo/ipns"
+	util "github.com/bluzelle/boxo/util"
 	record "github.com/libp2p/go-libp2p-record"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	"github.com/libp2p/go-libp2p/core/peerstore"
 	madns "github.com/multiformats/go-multiaddr-dns"
 
-	"github.com/ipfs/boxo/namesys"
-	"github.com/ipfs/boxo/namesys/republisher"
+	"github.com/bluzelle/boxo/namesys"
+	"github.com/bluzelle/boxo/namesys/republisher"
 	"github.com/bluzelle/ipfs-kubo/repo"
 	irouting "github.com/bluzelle/ipfs-kubo/routing"
 )

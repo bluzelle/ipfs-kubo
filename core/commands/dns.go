@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io"
 
-	namesys "github.com/ipfs/boxo/namesys"
-	"github.com/ipfs/boxo/path"
+	namesys "github.com/bluzelle/boxo/namesys"
+	"github.com/bluzelle/boxo/path"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	ncmd "github.com/bluzelle/ipfs-kubo/core/commands/name"
 

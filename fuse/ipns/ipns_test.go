@@ -19,7 +19,7 @@ import (
 	coreapi "github.com/bluzelle/ipfs-kubo/core/coreapi"
 
 	fstest "bazil.org/fuse/fs/fstestutil"
-	u "github.com/ipfs/boxo/util"
+	u "github.com/bluzelle/boxo/util"
 	racedet "github.com/ipfs/go-detect-race"
 	ci "github.com/libp2p/go-libp2p-testing/ci"
 )

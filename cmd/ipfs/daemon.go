@@ -15,9 +15,7 @@ import (
 
 	multierror "github.com/hashicorp/go-multierror"
 
-	options "github.com/ipfs/boxo/coreiface/options"
-	cmds "github.com/ipfs/go-ipfs-cmds"
-	mprome "github.com/ipfs/go-metrics-prometheus"
+	options "github.com/bluzelle/boxo/coreiface/options"
 	version "github.com/bluzelle/ipfs-kubo"
 	utilmain "github.com/bluzelle/ipfs-kubo/cmd/ipfs/util"
 	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
@@ -33,6 +31,8 @@ import (
 	fsrepo "github.com/bluzelle/ipfs-kubo/repo/fsrepo"
 	"github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations"
 	"github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations/ipfsfetcher"
+	cmds "github.com/ipfs/go-ipfs-cmds"
+	mprome "github.com/ipfs/go-metrics-prometheus"
 	goprocess "github.com/jbenet/goprocess"
 	p2pcrypto "github.com/libp2p/go-libp2p/core/crypto"
 	pnet "github.com/libp2p/go-libp2p/core/pnet"

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ipfs/boxo/ipld/merkledag/dagutils"
-	"github.com/ipfs/boxo/path"
+	"github.com/bluzelle/boxo/ipld/merkledag/dagutils"
+	"github.com/bluzelle/boxo/path"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"

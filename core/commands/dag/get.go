@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ipfs/boxo/path"
-	ipldlegacy "github.com/ipfs/go-ipld-legacy"
+	"github.com/bluzelle/boxo/path"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	ipldlegacy "github.com/ipfs/go-ipld-legacy"
 
 	"github.com/ipld/go-ipld-prime"
 	"github.com/ipld/go-ipld-prime/multicodec"

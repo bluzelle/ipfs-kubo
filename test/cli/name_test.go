@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ipfs/boxo/ipns"
+	"github.com/bluzelle/boxo/ipns"
 	"github.com/bluzelle/ipfs-kubo/core/commands/name"
 	"github.com/bluzelle/ipfs-kubo/test/cli/harness"
 	"github.com/stretchr/testify/require"

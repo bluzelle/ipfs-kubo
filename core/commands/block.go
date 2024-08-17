@@ -6,12 +6,12 @@ import (
 	"io"
 	"os"
 
-	"github.com/ipfs/boxo/files"
+	"github.com/bluzelle/boxo/files"
 
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
-	options "github.com/ipfs/boxo/coreiface/options"
+	options "github.com/bluzelle/boxo/coreiface/options"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	mh "github.com/multiformats/go-multihash"

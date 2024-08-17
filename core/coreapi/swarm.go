@@ -5,7 +5,7 @@ import (
 	"sort"
 	"time"
 
-	coreiface "github.com/ipfs/boxo/coreiface"
+	coreiface "github.com/bluzelle/boxo/coreiface"
 	"github.com/bluzelle/ipfs-kubo/tracing"
 	inet "github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"

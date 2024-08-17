@@ -9,12 +9,12 @@ import (
 	"path"
 	"strings"
 
-	dag "github.com/ipfs/boxo/ipld/merkledag"
-	"github.com/ipfs/boxo/ipld/merkledag/dagutils"
-	importer "github.com/ipfs/boxo/ipld/unixfs/importer"
-	uio "github.com/ipfs/boxo/ipld/unixfs/io"
+	dag "github.com/bluzelle/boxo/ipld/merkledag"
+	"github.com/bluzelle/boxo/ipld/merkledag/dagutils"
+	importer "github.com/bluzelle/boxo/ipld/unixfs/importer"
+	uio "github.com/bluzelle/boxo/ipld/unixfs/io"
 
-	chunker "github.com/ipfs/boxo/chunker"
+	chunker "github.com/bluzelle/boxo/chunker"
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log"
 )

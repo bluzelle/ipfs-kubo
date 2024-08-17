@@ -8,8 +8,8 @@ import (
 	"github.com/bluzelle/ipfs-kubo/commands"
 	"github.com/bluzelle/ipfs-kubo/core"
 
-	coreiface "github.com/ipfs/boxo/coreiface"
-	options "github.com/ipfs/boxo/coreiface/options"
+	coreiface "github.com/bluzelle/boxo/coreiface"
+	options "github.com/bluzelle/boxo/coreiface/options"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
 )

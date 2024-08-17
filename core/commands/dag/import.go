@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/files"
+	"github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/files"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
 	cmds "github.com/ipfs/go-ipfs-cmds"

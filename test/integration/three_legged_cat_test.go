@@ -9,12 +9,12 @@ import (
 	"testing"
 	"time"
 
-	bootstrap2 "github.com/ipfs/boxo/bootstrap"
+	bootstrap2 "github.com/bluzelle/boxo/bootstrap"
 	"github.com/bluzelle/ipfs-kubo/core/coreapi"
 	mock "github.com/bluzelle/ipfs-kubo/core/mock"
 	"github.com/bluzelle/ipfs-kubo/thirdparty/unit"
 
-	"github.com/ipfs/boxo/files"
+	"github.com/bluzelle/boxo/files"
 	testutil "github.com/libp2p/go-libp2p-testing/net"
 	"github.com/libp2p/go-libp2p/core/peer"
 	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"

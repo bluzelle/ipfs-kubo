@@ -3,9 +3,9 @@ package commands
 import (
 	"testing"
 
-	"github.com/ipfs/boxo/namesys"
+	"github.com/bluzelle/boxo/namesys"
 
-	ipns "github.com/ipfs/boxo/ipns"
+	ipns "github.com/bluzelle/boxo/ipns"
 	"github.com/libp2p/go-libp2p/core/test"
 )
 

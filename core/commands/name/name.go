@@ -8,10 +8,10 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/ipfs/boxo/ipns"
-	ipns_pb "github.com/ipfs/boxo/ipns/pb"
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	"github.com/bluzelle/boxo/ipns"
+	ipns_pb "github.com/bluzelle/boxo/ipns/pb"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	"google.golang.org/protobuf/proto"
 )
 

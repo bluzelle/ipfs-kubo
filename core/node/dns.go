@@ -4,7 +4,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/ipfs/boxo/gateway"
+	"github.com/bluzelle/boxo/gateway"
 	config "github.com/bluzelle/ipfs-kubo/config"
 	doh "github.com/libp2p/go-doh-resolver"
 	madns "github.com/multiformats/go-multiaddr-dns"

@@ -1,7 +1,7 @@
 package dagcmd
 
 import (
-	"github.com/ipfs/boxo/path"
+	"github.com/bluzelle/boxo/path"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 

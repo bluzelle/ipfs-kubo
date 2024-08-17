@@ -7,9 +7,9 @@ import (
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	e "github.com/bluzelle/ipfs-kubo/core/commands/e"
 
+	bitswap "github.com/bluzelle/boxo/bitswap"
+	"github.com/bluzelle/boxo/bitswap/server"
 	humanize "github.com/dustin/go-humanize"
-	bitswap "github.com/ipfs/boxo/bitswap"
-	"github.com/ipfs/boxo/bitswap/server"
 	cidutil "github.com/ipfs/go-cidutil"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	peer "github.com/libp2p/go-libp2p/core/peer"

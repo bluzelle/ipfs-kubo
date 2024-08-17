@@ -9,8 +9,8 @@ import (
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
-	merkledag "github.com/ipfs/boxo/ipld/merkledag"
-	unixfs "github.com/ipfs/boxo/ipld/unixfs"
+	merkledag "github.com/bluzelle/boxo/ipld/merkledag"
+	unixfs "github.com/bluzelle/boxo/ipld/unixfs"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 

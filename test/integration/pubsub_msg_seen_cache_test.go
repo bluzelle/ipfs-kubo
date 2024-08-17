@@ -10,7 +10,7 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/ipfs/boxo/bootstrap"
+	"github.com/bluzelle/boxo/bootstrap"
 	"github.com/bluzelle/ipfs-kubo/config"
 	"github.com/bluzelle/ipfs-kubo/core"
 	"github.com/bluzelle/ipfs-kubo/core/coreapi"

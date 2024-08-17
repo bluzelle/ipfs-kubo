@@ -9,18 +9,18 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ipfs/boxo/namesys"
+	"github.com/bluzelle/boxo/namesys"
 	version "github.com/bluzelle/ipfs-kubo"
 	"github.com/bluzelle/ipfs-kubo/core"
 	"github.com/bluzelle/ipfs-kubo/core/coreapi"
 	"github.com/bluzelle/ipfs-kubo/repo"
 	"github.com/stretchr/testify/assert"
 
-	iface "github.com/ipfs/boxo/coreiface"
-	"github.com/ipfs/boxo/path"
+	iface "github.com/bluzelle/boxo/coreiface"
+	"github.com/bluzelle/boxo/path"
+	"github.com/bluzelle/ipfs-kubo/config"
 	"github.com/ipfs/go-datastore"
 	syncds "github.com/ipfs/go-datastore/sync"
-	"github.com/bluzelle/ipfs-kubo/config"
 	ci "github.com/libp2p/go-libp2p/core/crypto"
 )
 

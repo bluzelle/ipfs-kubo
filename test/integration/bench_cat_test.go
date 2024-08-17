@@ -8,8 +8,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/ipfs/boxo/bootstrap"
-	"github.com/ipfs/boxo/files"
+	"github.com/bluzelle/boxo/bootstrap"
+	"github.com/bluzelle/boxo/files"
 	"github.com/bluzelle/ipfs-kubo/core"
 	"github.com/bluzelle/ipfs-kubo/core/coreapi"
 	mock "github.com/bluzelle/ipfs-kubo/core/mock"

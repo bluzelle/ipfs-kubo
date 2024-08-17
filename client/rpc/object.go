@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"io"
 
-	iface "github.com/ipfs/boxo/coreiface"
-	caopts "github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/ipld/merkledag"
-	ft "github.com/ipfs/boxo/ipld/unixfs"
-	"github.com/ipfs/boxo/path"
+	iface "github.com/bluzelle/boxo/coreiface"
+	caopts "github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/ipld/merkledag"
+	ft "github.com/bluzelle/boxo/ipld/unixfs"
+	"github.com/bluzelle/boxo/path"
 	"github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
 )

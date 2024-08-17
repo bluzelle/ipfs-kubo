@@ -5,8 +5,8 @@ import (
 	"errors"
 	"net"
 
-	filestore "github.com/ipfs/boxo/filestore"
-	keystore "github.com/ipfs/boxo/keystore"
+	filestore "github.com/bluzelle/boxo/filestore"
+	keystore "github.com/bluzelle/boxo/keystore"
 	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
 
 	config "github.com/bluzelle/ipfs-kubo/config"

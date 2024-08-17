@@ -7,13 +7,13 @@ import (
 	"io"
 	"text/tabwriter"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 
+	"github.com/bluzelle/boxo/coreiface/options"
+	dag "github.com/bluzelle/boxo/ipld/merkledag"
 	humanize "github.com/dustin/go-humanize"
-	"github.com/ipfs/boxo/coreiface/options"
-	dag "github.com/ipfs/boxo/ipld/merkledag"
 	"github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
 )

@@ -18,8 +18,8 @@ import (
 	"github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations"
 	"github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations/ipfsfetcher"
 
+	bstore "github.com/bluzelle/boxo/blockstore"
 	humanize "github.com/dustin/go-humanize"
-	bstore "github.com/ipfs/boxo/blockstore"
 	cid "github.com/ipfs/go-cid"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )

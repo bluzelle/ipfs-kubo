@@ -3,8 +3,8 @@ package verifbs
 import (
 	"context"
 
-	bstore "github.com/ipfs/boxo/blockstore"
-	"github.com/ipfs/boxo/verifcid"
+	bstore "github.com/bluzelle/boxo/blockstore"
+	"github.com/bluzelle/boxo/verifcid"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
 )

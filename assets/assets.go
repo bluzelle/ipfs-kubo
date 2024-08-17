@@ -8,9 +8,9 @@ import (
 	"github.com/bluzelle/ipfs-kubo/core"
 	"github.com/bluzelle/ipfs-kubo/core/coreapi"
 
-	options "github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/files"
-	"github.com/ipfs/boxo/path"
+	options "github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/files"
+	"github.com/bluzelle/boxo/path"
 	cid "github.com/ipfs/go-cid"
 )
 

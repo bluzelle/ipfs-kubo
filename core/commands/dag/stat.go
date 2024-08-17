@@ -5,13 +5,13 @@ import (
 	"io"
 	"os"
 
-	mdag "github.com/ipfs/boxo/ipld/merkledag"
-	"github.com/ipfs/boxo/ipld/merkledag/traverse"
-	cid "github.com/ipfs/go-cid"
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	mdag "github.com/bluzelle/boxo/ipld/merkledag"
+	"github.com/bluzelle/boxo/ipld/merkledag/traverse"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 	"github.com/bluzelle/ipfs-kubo/core/commands/e"
+	cid "github.com/ipfs/go-cid"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 // TODO cache every cid traversal in a dp cache

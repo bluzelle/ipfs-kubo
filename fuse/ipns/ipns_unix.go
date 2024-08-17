@@ -14,15 +14,15 @@ import (
 	"strings"
 	"syscall"
 
-	dag "github.com/ipfs/boxo/ipld/merkledag"
-	ft "github.com/ipfs/boxo/ipld/unixfs"
-	"github.com/ipfs/boxo/path"
+	dag "github.com/bluzelle/boxo/ipld/merkledag"
+	ft "github.com/bluzelle/boxo/ipld/unixfs"
+	"github.com/bluzelle/boxo/path"
 
 	fuse "bazil.org/fuse"
 	fs "bazil.org/fuse/fs"
-	iface "github.com/ipfs/boxo/coreiface"
-	options "github.com/ipfs/boxo/coreiface/options"
-	mfs "github.com/ipfs/boxo/mfs"
+	iface "github.com/bluzelle/boxo/coreiface"
+	options "github.com/bluzelle/boxo/coreiface/options"
+	mfs "github.com/bluzelle/boxo/mfs"
 	cid "github.com/ipfs/go-cid"
 	logging "github.com/ipfs/go-log"
 )

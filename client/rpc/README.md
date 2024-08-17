@@ -2,7 +2,7 @@
 
 > IPFS CoreAPI implementation using HTTP API
 
-This packages implements [`coreiface.CoreAPI`](https://pkg.go.dev/github.com/ipfs/boxo/coreiface#CoreAPI) over the HTTP API.
+This packages implements [`coreiface.CoreAPI`](https://pkg.go.dev/github.com/bluzelle/boxo/coreiface#CoreAPI) over the HTTP API.
 
 ## Documentation
 
@@ -20,7 +20,7 @@ import (
     "fmt"
 
     "github.com/bluzelle/ipfs-kubo/client/rpc"
-    path "github.com/ipfs/boxo/coreiface/path"
+    path "github.com/bluzelle/boxo/coreiface/path"
 )
 
 func main() {

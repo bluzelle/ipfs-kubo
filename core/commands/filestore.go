@@ -6,11 +6,11 @@ import (
 	"io"
 	"os"
 
-	filestore "github.com/ipfs/boxo/filestore"
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	filestore "github.com/bluzelle/boxo/filestore"
 	core "github.com/bluzelle/ipfs-kubo/core"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	e "github.com/bluzelle/ipfs-kubo/core/commands/e"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 
 	"github.com/ipfs/go-cid"
 )

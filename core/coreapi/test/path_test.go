@@ -6,11 +6,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/files"
-	"github.com/ipfs/boxo/ipld/merkledag"
-	uio "github.com/ipfs/boxo/ipld/unixfs/io"
-	"github.com/ipfs/boxo/path"
+	"github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/files"
+	"github.com/bluzelle/boxo/ipld/merkledag"
+	uio "github.com/bluzelle/boxo/ipld/unixfs/io"
+	"github.com/bluzelle/boxo/path"
 	"github.com/ipld/go-ipld-prime"
 )
 

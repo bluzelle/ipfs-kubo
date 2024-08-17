@@ -5,8 +5,8 @@ import (
 	"errors"
 	"strings"
 
-	coreiface "github.com/ipfs/boxo/coreiface"
-	caopts "github.com/ipfs/boxo/coreiface/options"
+	coreiface "github.com/bluzelle/boxo/coreiface"
+	caopts "github.com/bluzelle/boxo/coreiface/options"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 )
 

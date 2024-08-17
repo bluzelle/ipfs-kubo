@@ -7,7 +7,7 @@ import (
 	"strings"
 	"unicode"
 
-	verifcid "github.com/ipfs/boxo/verifcid"
+	verifcid "github.com/bluzelle/boxo/verifcid"
 	cid "github.com/ipfs/go-cid"
 	cidutil "github.com/ipfs/go-cidutil"
 	cmds "github.com/ipfs/go-ipfs-cmds"

@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"io"
 
-	iface "github.com/ipfs/boxo/coreiface"
-	caopts "github.com/ipfs/boxo/coreiface/options"
-	"github.com/ipfs/boxo/files"
-	unixfs "github.com/ipfs/boxo/ipld/unixfs"
-	unixfs_pb "github.com/ipfs/boxo/ipld/unixfs/pb"
-	"github.com/ipfs/boxo/path"
+	iface "github.com/bluzelle/boxo/coreiface"
+	caopts "github.com/bluzelle/boxo/coreiface/options"
+	"github.com/bluzelle/boxo/files"
+	unixfs "github.com/bluzelle/boxo/ipld/unixfs"
+	unixfs_pb "github.com/bluzelle/boxo/ipld/unixfs/pb"
+	"github.com/bluzelle/boxo/path"
 	"github.com/ipfs/go-cid"
 	mh "github.com/multiformats/go-multihash"
 )

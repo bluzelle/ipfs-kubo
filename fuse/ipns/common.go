@@ -3,9 +3,9 @@ package ipns
 import (
 	"context"
 
-	ft "github.com/ipfs/boxo/ipld/unixfs"
-	"github.com/ipfs/boxo/namesys"
-	"github.com/ipfs/boxo/path"
+	ft "github.com/bluzelle/boxo/ipld/unixfs"
+	"github.com/bluzelle/boxo/namesys"
+	"github.com/bluzelle/boxo/path"
 	"github.com/bluzelle/ipfs-kubo/core"
 	ci "github.com/libp2p/go-libp2p/core/crypto"
 )
