@@ -5,8 +5,8 @@ import (
 	"fmt"
 	gopath "path"
 
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/coreapi"
+	"github.com/bluzelle/ipfs-kubo/core"
+	"github.com/bluzelle/ipfs-kubo/core/coreapi"
 
 	options "github.com/ipfs/boxo/coreiface/options"
 	"github.com/ipfs/boxo/files"

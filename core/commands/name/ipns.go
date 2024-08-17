@@ -12,7 +12,7 @@ import (
 	"github.com/ipfs/boxo/path"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
+	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 )
 
 var log = logging.Logger("core/commands/ipns")

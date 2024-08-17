@@ -5,8 +5,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ipfs/kubo/test/cli/harness"
-	"github.com/ipfs/kubo/test/cli/testutils"
+	"github.com/bluzelle/ipfs-kubo/test/cli/harness"
+	"github.com/bluzelle/ipfs-kubo/test/cli/testutils"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

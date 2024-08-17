@@ -7,8 +7,8 @@ import (
 	"io"
 	"strings"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
+	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
 	iface "github.com/ipfs/boxo/coreiface"
 	merkledag "github.com/ipfs/boxo/ipld/merkledag"

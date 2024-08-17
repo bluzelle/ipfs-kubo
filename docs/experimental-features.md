@@ -6,7 +6,7 @@ Once they reach maturity, there's going to be mention in the changelog and
 release posts. If they don't reach maturity, the same applies, and their code is
 removed.
 
-Subscribe to https://github.com/ipfs/kubo/issues/3397 to get updates.
+Subscribe to https://github.com/bluzelle/ipfs-kubo/issues/3397 to get updates.
 
 When you add a new experimental feature to kubo or change an experimental
 feature, you MUST please make a PR updating this document, and link the PR in
@@ -639,7 +639,7 @@ Notes:
     `application/vnd.ipld.car` (from [Trustless Gateway Specification](https://specs.ipfs.tech/http-gateways/trustless-gateway/),
     where data integrity can be verified).
   - Only serve data that is already local to the node (i.e. similar to a
-    [`Gateway.NoFetch`](https://github.com/ipfs/kubo/blob/master/docs/config.md#gatewaynofetch))
+    [`Gateway.NoFetch`](https://github.com/bluzelle/ipfs-kubo/blob/master/docs/config.md#gatewaynofetch))
 - While Kubo currently mounts the gateway API at the root (i.e. `/`) of the
   libp2p `/http/1.1` protocol, that is subject to change.
   - The way to reliably discover where a given HTTP protocol is mounted on a
@@ -666,4 +666,4 @@ ipfs config --json Experimental.GatewayOverLibp2p true
 
 ## Accelerated DHT Client
 
-This feature now lives at [`Routing.AcceleratedDHTClient`](https://github.com/ipfs/kubo/blob/master/docs/config.md#routingaccelerateddhtclient).
+This feature now lives at [`Routing.AcceleratedDHTClient`](https://github.com/bluzelle/ipfs-kubo/blob/master/docs/config.md#routingaccelerateddhtclient).

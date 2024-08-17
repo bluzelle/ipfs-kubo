@@ -679,7 +679,7 @@ An optional flag to expose Kubo `Routing` system on the gateway port as a [Routi
 V1](https://specs.ipfs.tech/routing/routing-v1/) endpoint.  This only affects your
 local gateway, at `127.0.0.1`.
 
-This endpoint can be used by other Kubo instance, as illustrated in [`delegated_routing_v1_http_proxy_test.go`](https://github.com/ipfs/kubo/blob/master/test/cli/delegated_routing_v1_http_proxy_test.go).
+This endpoint can be used by other Kubo instance, as illustrated in [`delegated_routing_v1_http_proxy_test.go`](https://github.com/bluzelle/ipfs-kubo/blob/master/test/cli/delegated_routing_v1_http_proxy_test.go).
 
 Default: `false`
 
@@ -703,11 +703,11 @@ Type: `string` (url)
 
 ### `Gateway.FastDirIndexThreshold`
 
-**REMOVED**: this option is [no longer necessary](https://github.com/ipfs/kubo/pull/9481). Ignored since  [Kubo 0.18](https://github.com/ipfs/kubo/blob/master/docs/changelogs/v0.18.md).
+**REMOVED**: this option is [no longer necessary](https://github.com/bluzelle/ipfs-kubo/pull/9481). Ignored since  [Kubo 0.18](https://github.com/bluzelle/ipfs-kubo/blob/master/docs/changelogs/v0.18.md).
 
 ### `Gateway.Writable`
 
-**REMOVED**: this option no longer available as of [Kubo 0.20](https://github.com/ipfs/kubo/blob/master/docs/changelogs/v0.20.md).
+**REMOVED**: this option no longer available as of [Kubo 0.20](https://github.com/bluzelle/ipfs-kubo/blob/master/docs/changelogs/v0.20.md).
 
 We are working on developing a modern replacement. To support our efforts, please leave a comment describing your use case in [ipfs/specs#375](https://github.com/ipfs/specs/issues/375).
 
@@ -1196,7 +1196,7 @@ Type: `duration`
 
 ## `Pubsub`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/bluzelle/ipfs-kubo/issues/9717)
 
 Pubsub configures the `ipfs pubsub` subsystem. To use, it must be enabled by
 passing the `--enable-pubsub-experiment` flag to the daemon
@@ -1204,7 +1204,7 @@ or via the `Pubsub.Enabled` flag below.
 
 ### `Pubsub.Enabled`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/bluzelle/ipfs-kubo/issues/9717)
 
 Enables the pubsub system.
 
@@ -1214,7 +1214,7 @@ Type: `flag`
 
 ### `Pubsub.Router`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/bluzelle/ipfs-kubo/issues/9717)
 
 Sets the default router used by pubsub to route messages to peers. This can be one of:
 
@@ -1231,7 +1231,7 @@ Type: `string` (one of `"floodsub"`, `"gossipsub"`, or `""` (apply default))
 
 ### `Pubsub.DisableSigning`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/bluzelle/ipfs-kubo/issues/9717)
 
 Disables message signing and signature verification. Enable this option if
 you're operating in a completely trusted network.
@@ -1246,7 +1246,7 @@ Type: `bool`
 
 ### `Pubsub.SeenMessagesTTL`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/bluzelle/ipfs-kubo/issues/9717)
 
 Controls the time window within which duplicate messages, identified by Message
 ID, will be identified and won't be emitted again.
@@ -1267,7 +1267,7 @@ Type: `optionalDuration`
 
 ### `Pubsub.SeenMessagesStrategy`
 
-**DEPRECATED**: See [#9717](https://github.com/ipfs/kubo/issues/9717)
+**DEPRECATED**: See [#9717](https://github.com/bluzelle/ipfs-kubo/issues/9717)
 
 Determines how the time-to-live (TTL) countdown for deduplicating Pubsub
 messages is calculated.
@@ -2157,7 +2157,7 @@ Type: `priority`
 
 ### `Swarm.Transports.Multiplexers.Mplex`
 
-**DEPRECATED**: See https://github.com/ipfs/kubo/issues/9958
+**DEPRECATED**: See https://github.com/bluzelle/ipfs-kubo/issues/9958
 
 Mplex is deprecated, this is because it is unreliable and
 randomly drop streams when sending data *too fast*.

@@ -6,7 +6,7 @@ import (
 	"net/url"
 
 	filestore "github.com/ipfs/boxo/filestore"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
+	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
 	"github.com/ipfs/boxo/coreiface/options"
 	"github.com/ipfs/boxo/files"

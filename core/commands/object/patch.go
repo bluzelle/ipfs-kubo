@@ -5,14 +5,14 @@ import (
 	"io"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
 	"github.com/ipfs/boxo/coreiface/options"
 )
 
 var ObjectPatchCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7936
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/issues/7936
 	Helptext: cmds.HelpText{
 		Tagline: "Deprecated way to create a new merkledag object based on an existing one. Use MFS with 'files cp|rm' instead.",
 		ShortDescription: `
@@ -48,7 +48,7 @@ For modern use cases, use MFS with 'files' commands: 'ipfs files --help'.
 }
 
 var patchAppendDataCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7936
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/issues/7936
 	Helptext: cmds.HelpText{
 		Tagline: "Deprecated way to append data to the data segment of a DAG node.",
 		ShortDescription: `
@@ -106,7 +106,7 @@ DEPRECATED and provided for legacy reasons. Use 'ipfs add' or 'ipfs files' inste
 }
 
 var patchSetDataCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7936
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/issues/7936
 	Helptext: cmds.HelpText{
 		Tagline: "Deprecated way to set the data field of dag-pb object.",
 		ShortDescription: `
@@ -160,7 +160,7 @@ DEPRECATED and provided for legacy reasons. Use 'files cp' and 'dag put' instead
 }
 
 var patchRmLinkCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7936
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/issues/7936
 	Helptext: cmds.HelpText{
 		Tagline: "Deprecated way to remove a link from dag-pb object.",
 		ShortDescription: `
@@ -210,7 +210,7 @@ const (
 )
 
 var patchAddLinkCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7936
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/issues/7936
 	Helptext: cmds.HelpText{
 		Tagline: "Deprecated way to add a link to a given dag-pb.",
 		ShortDescription: `

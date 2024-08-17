@@ -8,7 +8,7 @@ import (
 	gopath "path"
 	"strings"
 
-	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
 	"github.com/cheggaaa/pb"
 	coreiface "github.com/ipfs/boxo/coreiface"

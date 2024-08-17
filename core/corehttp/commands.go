@@ -11,11 +11,11 @@ import (
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	cmdsHttp "github.com/ipfs/go-ipfs-cmds/http"
-	version "github.com/ipfs/kubo"
-	oldcmds "github.com/ipfs/kubo/commands"
-	config "github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core"
-	corecommands "github.com/ipfs/kubo/core/commands"
+	version "github.com/bluzelle/ipfs-kubo"
+	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
+	config "github.com/bluzelle/ipfs-kubo/config"
+	"github.com/bluzelle/ipfs-kubo/core"
+	corecommands "github.com/bluzelle/ipfs-kubo/core/commands"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 )
 

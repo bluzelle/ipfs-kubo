@@ -5,9 +5,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ipfs/kubo/config"
+	"github.com/bluzelle/ipfs-kubo/config"
 
-	"github.com/ipfs/kubo/core/node/libp2p/internal/mplex"
+	"github.com/bluzelle/ipfs-kubo/core/node/libp2p/internal/mplex"
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p/p2p/muxer/yamux"
 )

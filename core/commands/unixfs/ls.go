@@ -6,8 +6,8 @@ import (
 	"sort"
 	"text/tabwriter"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
+	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
 	merkledag "github.com/ipfs/boxo/ipld/merkledag"
 	unixfs "github.com/ipfs/boxo/ipld/unixfs"
@@ -33,7 +33,7 @@ type LsOutput struct {
 }
 
 var LsCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/pull/7755
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/pull/7755
 	Helptext: cmds.HelpText{
 		Tagline: "List directory contents for Unix filesystem objects. Deprecated: Use 'ipfs ls' and 'ipfs files ls' instead.",
 		ShortDescription: `

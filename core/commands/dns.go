@@ -6,8 +6,8 @@ import (
 
 	namesys "github.com/ipfs/boxo/namesys"
 	"github.com/ipfs/boxo/path"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	ncmd "github.com/ipfs/kubo/core/commands/name"
+	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	ncmd "github.com/bluzelle/ipfs-kubo/core/commands/name"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 )
@@ -17,7 +17,7 @@ const (
 )
 
 var DNSCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/8607
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/issues/8607
 	Helptext: cmds.HelpText{
 		Tagline: "Resolve DNSLink records.",
 		ShortDescription: `

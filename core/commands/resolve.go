@@ -9,9 +9,9 @@ import (
 
 	ns "github.com/ipfs/boxo/namesys"
 	cidenc "github.com/ipfs/go-cidutil/cidenc"
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
-	ncmd "github.com/ipfs/kubo/core/commands/name"
+	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	ncmd "github.com/bluzelle/ipfs-kubo/core/commands/name"
 
 	options "github.com/ipfs/boxo/coreiface/options"
 	"github.com/ipfs/boxo/path"

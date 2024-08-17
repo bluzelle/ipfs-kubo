@@ -11,8 +11,8 @@ import (
 	"strings"
 
 	humanize "github.com/dustin/go-humanize"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
 	bservice "github.com/ipfs/boxo/blockservice"
 	iface "github.com/ipfs/boxo/coreiface"

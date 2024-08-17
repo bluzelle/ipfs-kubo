@@ -18,7 +18,7 @@ import (
 	"github.com/ipfs/boxo/ipld/merkledag"
 	"github.com/ipfs/go-cid"
 	legacy "github.com/ipfs/go-ipld-legacy"
-	ipfs "github.com/ipfs/kubo"
+	ipfs "github.com/bluzelle/ipfs-kubo"
 	dagpb "github.com/ipld/go-codec-dagpb"
 	_ "github.com/ipld/go-ipld-prime/codec/dagcbor"
 	"github.com/ipld/go-ipld-prime/node/basicnode"

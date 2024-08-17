@@ -12,7 +12,7 @@ import (
 
 const (
 	AllowBigBlockOptionName = "allow-big-block"
-	SoftBlockLimit          = 1024 * 1024 // https://github.com/ipfs/kubo/issues/7421#issuecomment-910833499
+	SoftBlockLimit          = 1024 * 1024 // https://github.com/bluzelle/ipfs-kubo/issues/7421#issuecomment-910833499
 )
 
 var AllowBigBlockOption cmds.Option

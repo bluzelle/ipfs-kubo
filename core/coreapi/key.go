@@ -11,7 +11,7 @@ import (
 	caopts "github.com/ipfs/boxo/coreiface/options"
 	"github.com/ipfs/boxo/ipns"
 	"github.com/ipfs/boxo/path"
-	"github.com/ipfs/kubo/tracing"
+	"github.com/bluzelle/ipfs-kubo/tracing"
 	crypto "github.com/libp2p/go-libp2p/core/crypto"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	"go.opentelemetry.io/otel/attribute"

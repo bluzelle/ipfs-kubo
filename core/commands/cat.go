@@ -6,8 +6,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
 	"github.com/cheggaaa/pb"
 	iface "github.com/ipfs/boxo/coreiface"

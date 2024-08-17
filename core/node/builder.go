@@ -8,13 +8,13 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/ipfs/kubo/core/node/helpers"
-	"github.com/ipfs/kubo/core/node/libp2p"
-	"github.com/ipfs/kubo/repo"
+	"github.com/bluzelle/ipfs-kubo/core/node/helpers"
+	"github.com/bluzelle/ipfs-kubo/core/node/libp2p"
+	"github.com/bluzelle/ipfs-kubo/repo"
 
 	ds "github.com/ipfs/go-datastore"
 	dsync "github.com/ipfs/go-datastore/sync"
-	cfg "github.com/ipfs/kubo/config"
+	cfg "github.com/bluzelle/ipfs-kubo/config"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 )

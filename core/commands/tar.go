@@ -5,15 +5,15 @@ import (
 	"io"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
-	tar "github.com/ipfs/kubo/tar"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	tar "github.com/bluzelle/ipfs-kubo/tar"
 
 	dag "github.com/ipfs/boxo/ipld/merkledag"
 )
 
 var TarCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7951
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/issues/7951
 	Helptext: cmds.HelpText{
 		Tagline: "Utility functions for tar files in ipfs.",
 	},
@@ -25,7 +25,7 @@ var TarCmd = &cmds.Command{
 }
 
 var tarAddCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7951
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/issues/7951
 	Helptext: cmds.HelpText{
 		Tagline: "Import a tar file into IPFS.",
 		ShortDescription: `
@@ -76,7 +76,7 @@ represent it.
 }
 
 var tarCatCmd = &cmds.Command{
-	Status: cmds.Deprecated, // https://github.com/ipfs/kubo/issues/7951
+	Status: cmds.Deprecated, // https://github.com/bluzelle/ipfs-kubo/issues/7951
 	Helptext: cmds.HelpText{
 		Tagline: "Export a tar file from IPFS.",
 		ShortDescription: `

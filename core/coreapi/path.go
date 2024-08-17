@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/ipfs/boxo/namesys"
-	"github.com/ipfs/kubo/tracing"
+	"github.com/bluzelle/ipfs-kubo/tracing"
 
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
