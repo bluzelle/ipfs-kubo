@@ -7,10 +7,10 @@ import (
 	"os"
 
 	filestore "github.com/bluzelle/boxo/filestore"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	core "github.com/bluzelle/ipfs-kubo/core"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	e "github.com/bluzelle/ipfs-kubo/core/commands/e"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 
 	"github.com/ipfs/go-cid"
 )

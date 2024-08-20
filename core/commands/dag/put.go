@@ -13,7 +13,7 @@ import (
 	basicnode "github.com/ipld/go-ipld-prime/node/basic"
 
 	"github.com/bluzelle/boxo/files"
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
 	mc "github.com/multiformats/go-multicodec"
 

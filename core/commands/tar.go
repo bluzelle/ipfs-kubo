@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"io"
 
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 	tar "github.com/bluzelle/ipfs-kubo/tar"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 
 	dag "github.com/bluzelle/boxo/ipld/merkledag"
 )

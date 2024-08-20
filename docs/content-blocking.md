@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="#readme"><img src="https://github.com/ipfs-shipyard/nopfs/blob/41484a818e6542314f784da852fc41b76f2d48a6/logo.png?raw=true" alt="content blocking logo" title="content blocking in Kubo" width="200"></a>
+  <a href="#readme"><img src="https://github.com/bluzelle/nopfs/blob/41484a818e6542314f784da852fc41b76f2d48a6/logo.png?raw=true" alt="content blocking logo" title="content blocking in Kubo" width="200"></a>
   <br>
   Content Blocking in Kubo
   <br>
@@ -38,7 +38,7 @@ caused the request to be blocked.
 
 ## Denylist file format
 
-[NOpfs](https://github.com/ipfs-shipyard/nopfs) supports the format from [IPIP-383](https://github.com/ipfs/specs/pull/383).
+[NOpfs](https://github.com/bluzelle/nopfs) supports the format from [IPIP-383](https://github.com/ipfs/specs/pull/383).
 
 Clear-text rules are simple: just put content paths to block, one per line.
 Paths with unicode and whitespace need to be percend-encoded:

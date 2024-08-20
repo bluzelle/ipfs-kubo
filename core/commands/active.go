@@ -9,7 +9,7 @@ import (
 
 	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 )
 
 const (

@@ -14,7 +14,7 @@ import (
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	p2p "github.com/bluzelle/ipfs-kubo/p2p"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	pstore "github.com/libp2p/go-libp2p/core/peerstore"
 	protocol "github.com/libp2p/go-libp2p/core/protocol"

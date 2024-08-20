@@ -14,7 +14,7 @@ import (
 	options "github.com/bluzelle/boxo/coreiface/options"
 	unixfs "github.com/bluzelle/boxo/ipld/unixfs"
 	unixfs_pb "github.com/bluzelle/boxo/ipld/unixfs/pb"
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 )
 
 // LsLink contains printable data for a single ipld link in ls output

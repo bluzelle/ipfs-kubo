@@ -12,8 +12,8 @@ import (
 	iface "github.com/bluzelle/boxo/coreiface"
 	options "github.com/bluzelle/boxo/coreiface/options"
 	ipns "github.com/bluzelle/boxo/ipns"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	ke "github.com/bluzelle/ipfs-kubo/core/commands/keyencode"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 var errAllowOffline = errors.New("can't publish while offline: pass `--allow-offline` to override")

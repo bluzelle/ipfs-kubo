@@ -7,9 +7,9 @@ import (
 	"io"
 	"text/tabwriter"
 
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 
 	"github.com/bluzelle/boxo/coreiface/options"
 	dag "github.com/bluzelle/boxo/ipld/merkledag"

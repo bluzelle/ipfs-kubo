@@ -8,7 +8,7 @@ import (
 
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	"github.com/libp2p/go-libp2p-kad-dht/fullrt"
 	kbucket "github.com/libp2p/go-libp2p-kbucket"

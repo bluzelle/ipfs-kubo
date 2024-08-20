@@ -4,12 +4,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ipfs-shipyard/nopfs"
-	"github.com/ipfs-shipyard/nopfs/ipfs"
 	"github.com/bluzelle/ipfs-kubo/config"
 	"github.com/bluzelle/ipfs-kubo/core"
 	"github.com/bluzelle/ipfs-kubo/core/node"
 	"github.com/bluzelle/ipfs-kubo/plugin"
+	"github.com/bluzelle/nopfs"
+	"github.com/bluzelle/nopfs/ipfs"
 	"go.uber.org/fx"
 )
 

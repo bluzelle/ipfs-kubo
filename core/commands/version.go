@@ -8,7 +8,7 @@ import (
 
 	version "github.com/bluzelle/ipfs-kubo"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 )
 
 const (

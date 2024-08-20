@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	"github.com/bluzelle/ipfs-kubo/core/commands/e"
 	"github.com/bluzelle/ipfs-kubo/profile"
 )

@@ -13,9 +13,9 @@ import (
 	"github.com/bluzelle/ipfs-kubo/repo"
 	"github.com/bluzelle/ipfs-kubo/repo/fsrepo"
 
-	"github.com/elgris/jsondiff"
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	config "github.com/bluzelle/ipfs-kubo/config"
+	"github.com/elgris/jsondiff"
 )
 
 // ConfigUpdateOutput is config profile apply command's output

@@ -6,6 +6,9 @@ require (
 	github.com/benbjohnson/clock v1.3.5
 	github.com/blang/semver/v4 v4.0.0
 	github.com/bluzelle/boxo v0.15.1
+	github.com/bluzelle/go-ipfs-cmds v0.10.3
+	github.com/bluzelle/nopfs v0.0.16
+	github.com/bluzelle/nopfs/ipfs v0.14.0
 	github.com/cenkalti/backoff/v4 v4.2.1
 	github.com/ceramicnetwork/go-dag-jose v0.1.0
 	github.com/cheggaaa/pb v1.0.29
@@ -16,8 +19,6 @@ require (
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/google/uuid v1.3.1
 	github.com/hashicorp/go-multierror v1.1.1
-	github.com/ipfs-shipyard/nopfs v0.0.12-0.20231027223058-cde3b5ba964c
-	github.com/ipfs-shipyard/nopfs/ipfs v0.13.2-0.20231027223058-cde3b5ba964c
 	github.com/ipfs/go-block-format v0.2.0
 	github.com/ipfs/go-cid v0.4.1
 	github.com/ipfs/go-cidutil v0.1.0
@@ -29,7 +30,6 @@ require (
 	github.com/ipfs/go-ds-measure v0.2.0
 	github.com/ipfs/go-fs-lock v0.0.7
 	github.com/ipfs/go-graphsync v0.16.0
-	github.com/ipfs/go-ipfs-cmds v0.10.0
 	github.com/ipfs/go-ipld-format v0.6.0
 	github.com/ipfs/go-ipld-git v0.1.1
 	github.com/ipfs/go-ipld-legacy v0.2.1
@@ -83,12 +83,12 @@ require (
 	go.uber.org/dig v1.17.1
 	go.uber.org/fx v1.20.1
 	go.uber.org/multierr v1.11.0
-	go.uber.org/zap v1.26.0
+	go.uber.org/zap v1.27.0
 	golang.org/x/crypto v0.14.0
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d
 	golang.org/x/mod v0.13.0
 	golang.org/x/sync v0.4.0
-	golang.org/x/sys v0.13.0
+	golang.org/x/sys v0.24.0
 	google.golang.org/protobuf v1.31.0
 )
 
@@ -101,7 +101,7 @@ require (
 	github.com/cespare/xxhash v1.1.0 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/containerd/cgroups v1.1.0 // indirect
-	github.com/crackcomm/go-gitignore v0.0.0-20170627025303-887ab5e44cc3 // indirect
+	github.com/crackcomm/go-gitignore v0.0.0-20231225121904-e25f5bc08668 // indirect
 	github.com/cskr/pubsub v1.0.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/davidlazar/go-crypto v0.0.0-20200604182044-b73af7476f6c // indirect
@@ -134,7 +134,7 @@ require (
 	github.com/hashicorp/golang-lru/v2 v2.0.7 // indirect
 	github.com/huin/goupnp v1.3.0 // indirect
 	github.com/ipfs/bbloom v0.0.4 // indirect
-	github.com/ipfs/boxo v0.13.2-0.20231019090647-a7e134e54ff9 // indirect
+	github.com/ipfs/boxo v0.15.0 // indirect
 	github.com/ipfs/go-bitfield v1.1.0 // indirect
 	github.com/ipfs/go-blockservice v0.5.0 // indirect
 	github.com/ipfs/go-ipfs-blockstore v1.3.0 // indirect
@@ -212,10 +212,10 @@ require (
 	github.com/quic-go/quic-go v0.39.3 // indirect
 	github.com/quic-go/webtransport-go v0.6.0 // indirect
 	github.com/raulk/go-watchdog v1.3.0 // indirect
-	github.com/rs/cors v1.7.0 // indirect
+	github.com/rs/cors v1.11.0 // indirect
 	github.com/samber/lo v1.36.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
-	github.com/texttheater/golang-levenshtein v0.0.0-20180516184445-d188e65d659e // indirect
+	github.com/texttheater/golang-levenshtein v1.0.1 // indirect
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.0 // indirect
 	github.com/ucarion/urlpath v0.0.0-20200424170820-7ccc79b76bbb // indirect
@@ -233,12 +233,11 @@ require (
 	go.opentelemetry.io/otel/exporters/zipkin v1.14.0 // indirect
 	go.opentelemetry.io/otel/metric v1.17.0 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
-	go.uber.org/goleak v1.2.1 // indirect
 	go.uber.org/mock v0.3.0 // indirect
 	go4.org v0.0.0-20230225012048-214862532bf5 // indirect
 	golang.org/x/net v0.17.0 // indirect
 	golang.org/x/oauth2 v0.8.0 // indirect
-	golang.org/x/term v0.13.0 // indirect
+	golang.org/x/term v0.23.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
 	golang.org/x/tools v0.14.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
@@ -252,4 +251,6 @@ require (
 	lukechampine.com/blake3 v1.2.1 // indirect
 )
 
-go 1.20
+go 1.21
+
+toolchain go1.22.2

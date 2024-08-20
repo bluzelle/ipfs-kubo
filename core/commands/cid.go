@@ -8,9 +8,9 @@ import (
 	"unicode"
 
 	verifcid "github.com/bluzelle/boxo/verifcid"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	cid "github.com/ipfs/go-cid"
 	cidutil "github.com/ipfs/go-cidutil"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipldmulticodec "github.com/ipld/go-ipld-prime/multicodec"
 	mbase "github.com/multiformats/go-multibase"
 	mc "github.com/multiformats/go-multicodec"

@@ -3,7 +3,7 @@ package cmdutils
 import (
 	"fmt"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 
 	coreiface "github.com/bluzelle/boxo/coreiface"
 	"github.com/bluzelle/boxo/path"

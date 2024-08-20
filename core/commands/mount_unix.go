@@ -11,7 +11,7 @@ import (
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	nodeMount "github.com/bluzelle/ipfs-kubo/fuse/node"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	config "github.com/bluzelle/ipfs-kubo/config"
 )
 

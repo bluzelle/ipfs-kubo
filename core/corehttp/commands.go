@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
-	cmdsHttp "github.com/ipfs/go-ipfs-cmds/http"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmdsHttp "github.com/bluzelle/go-ipfs-cmds/http"
 	version "github.com/bluzelle/ipfs-kubo"
 	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
 	config "github.com/bluzelle/ipfs-kubo/config"

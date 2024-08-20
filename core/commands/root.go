@@ -10,7 +10,7 @@ import (
 	"github.com/bluzelle/ipfs-kubo/core/commands/pin"
 	unixfs "github.com/bluzelle/ipfs-kubo/core/commands/unixfs"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
 )
 

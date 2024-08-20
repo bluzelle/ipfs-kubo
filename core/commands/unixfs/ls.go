@@ -11,7 +11,7 @@ import (
 
 	merkledag "github.com/bluzelle/boxo/ipld/merkledag"
 	unixfs "github.com/bluzelle/boxo/ipld/unixfs"
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 )
 
 type LsLink struct {

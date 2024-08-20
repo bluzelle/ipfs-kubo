@@ -10,8 +10,8 @@ import (
 	options "github.com/bluzelle/boxo/coreiface/options"
 	"github.com/bluzelle/boxo/namesys"
 	"github.com/bluzelle/boxo/path"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
 )
 

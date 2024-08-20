@@ -14,6 +14,7 @@ import (
 
 	options "github.com/bluzelle/boxo/coreiface/options"
 	keystore "github.com/bluzelle/boxo/keystore"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
 	config "github.com/bluzelle/ipfs-kubo/config"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
@@ -21,7 +22,6 @@ import (
 	ke "github.com/bluzelle/ipfs-kubo/core/commands/keyencode"
 	fsrepo "github.com/bluzelle/ipfs-kubo/repo/fsrepo"
 	migrations "github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 )

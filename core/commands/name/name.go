@@ -10,8 +10,8 @@ import (
 
 	"github.com/bluzelle/boxo/ipns"
 	ipns_pb "github.com/bluzelle/boxo/ipns/pb"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	"google.golang.org/protobuf/proto"
 )
 

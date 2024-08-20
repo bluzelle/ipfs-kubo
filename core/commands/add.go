@@ -15,8 +15,8 @@ import (
 	"github.com/bluzelle/boxo/files"
 	mfs "github.com/bluzelle/boxo/mfs"
 	"github.com/bluzelle/boxo/path"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	"github.com/cheggaaa/pb"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
 	mh "github.com/multiformats/go-multihash"
 )

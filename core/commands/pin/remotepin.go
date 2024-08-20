@@ -16,12 +16,12 @@ import (
 	"golang.org/x/sync/errgroup"
 
 	pinclient "github.com/bluzelle/boxo/pinning/remote/client"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	config "github.com/bluzelle/ipfs-kubo/config"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 	fsrepo "github.com/bluzelle/ipfs-kubo/repo/fsrepo"
 	cid "github.com/ipfs/go-cid"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
 	"github.com/libp2p/go-libp2p/core/host"
 	peer "github.com/libp2p/go-libp2p/core/peer"

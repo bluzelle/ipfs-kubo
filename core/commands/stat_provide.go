@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/bluzelle/boxo/provider"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	humanize "github.com/dustin/go-humanize"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	"golang.org/x/exp/constraints"
 )
 

@@ -21,7 +21,7 @@ import (
 	"github.com/bluzelle/ipfs-kubo/repo"
 	"github.com/bluzelle/ipfs-kubo/repo/fsrepo"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	ic "github.com/libp2p/go-libp2p/core/crypto"
 	inet "github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"

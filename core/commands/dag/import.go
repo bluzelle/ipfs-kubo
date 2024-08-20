@@ -7,9 +7,9 @@ import (
 
 	"github.com/bluzelle/boxo/coreiface/options"
 	"github.com/bluzelle/boxo/files"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
 	ipldlegacy "github.com/ipfs/go-ipld-legacy"
 	gocarv2 "github.com/ipld/go-car/v2"

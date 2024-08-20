@@ -5,7 +5,7 @@ import (
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 )
 
 func dagResolve(req *cmds.Request, res cmds.ResponseEmitter, env cmds.Environment) error {

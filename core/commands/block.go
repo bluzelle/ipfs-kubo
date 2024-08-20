@@ -13,7 +13,7 @@ import (
 
 	options "github.com/bluzelle/boxo/coreiface/options"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	mh "github.com/multiformats/go-multihash"
 )
 

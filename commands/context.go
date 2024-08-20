@@ -12,8 +12,8 @@ import (
 
 	coreiface "github.com/bluzelle/boxo/coreiface"
 	options "github.com/bluzelle/boxo/coreiface/options"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	config "github.com/bluzelle/ipfs-kubo/config"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
 )
 

@@ -8,8 +8,8 @@ import (
 
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	humanize "github.com/dustin/go-humanize"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 	metrics "github.com/libp2p/go-libp2p/core/metrics"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	protocol "github.com/libp2p/go-libp2p/core/protocol"

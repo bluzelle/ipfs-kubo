@@ -14,9 +14,9 @@ import (
 	offline "github.com/bluzelle/boxo/exchange/offline"
 	dag "github.com/bluzelle/boxo/ipld/merkledag"
 	verifcid "github.com/bluzelle/boxo/verifcid"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	cid "github.com/ipfs/go-cid"
 	cidenc "github.com/ipfs/go-cidutil/cidenc"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 
 	core "github.com/bluzelle/ipfs-kubo/core"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"

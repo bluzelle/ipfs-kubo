@@ -9,7 +9,7 @@ import (
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	ncmd "github.com/bluzelle/ipfs-kubo/core/commands/name"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 )
 
 const (

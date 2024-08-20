@@ -11,8 +11,8 @@ import (
 
 	iface "github.com/bluzelle/boxo/coreiface"
 	"github.com/bluzelle/boxo/files"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	"github.com/cheggaaa/pb"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 const (

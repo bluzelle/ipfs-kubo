@@ -17,8 +17,8 @@ import (
 
 	"github.com/bluzelle/boxo/files"
 	"github.com/bluzelle/boxo/tar"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	"github.com/cheggaaa/pb"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 var ErrInvalidCompressionLevel = errors.New("compression level must be between 1 and 9")

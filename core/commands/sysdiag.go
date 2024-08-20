@@ -9,7 +9,7 @@ import (
 	"github.com/bluzelle/ipfs-kubo/core"
 	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	manet "github.com/multiformats/go-multiaddr/net"
 	sysi "github.com/whyrusleeping/go-sysinfo"
 )

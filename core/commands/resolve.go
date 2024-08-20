@@ -15,7 +15,7 @@ import (
 
 	options "github.com/bluzelle/boxo/coreiface/options"
 	"github.com/bluzelle/boxo/path"
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 )
 
 const (

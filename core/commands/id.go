@@ -13,7 +13,7 @@ import (
 	"github.com/bluzelle/ipfs-kubo/core"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	ke "github.com/bluzelle/ipfs-kubo/core/commands/keyencode"
 	kb "github.com/libp2p/go-libp2p-kbucket"
 	ic "github.com/libp2p/go-libp2p/core/crypto"

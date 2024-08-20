@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	ke "github.com/bluzelle/ipfs-kubo/core/commands/keyencode"
 	record "github.com/libp2p/go-libp2p-record"

@@ -19,9 +19,9 @@ import (
 	"github.com/bluzelle/ipfs-kubo/repo/fsrepo/migrations/ipfsfetcher"
 
 	bstore "github.com/bluzelle/boxo/blockstore"
+	cmds "github.com/bluzelle/go-ipfs-cmds"
 	humanize "github.com/dustin/go-humanize"
 	cid "github.com/ipfs/go-cid"
-	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 type RepoVersion struct {
