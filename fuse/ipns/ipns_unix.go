@@ -14,17 +14,17 @@ import (
 	"strings"
 	"syscall"
 
-	dag "github.com/bluzelle/boxo/ipld/merkledag"
-	ft "github.com/bluzelle/boxo/ipld/unixfs"
-	"github.com/bluzelle/boxo/path"
+	dag "github.com/ipfs/boxo/ipld/merkledag"
+	ft "github.com/ipfs/boxo/ipld/unixfs"
+	"github.com/ipfs/boxo/path"
 
 	fuse "bazil.org/fuse"
 	fs "bazil.org/fuse/fs"
-	iface "github.com/bluzelle/boxo/coreiface"
-	options "github.com/bluzelle/boxo/coreiface/options"
-	mfs "github.com/bluzelle/boxo/mfs"
+	mfs "github.com/ipfs/boxo/mfs"
 	cid "github.com/ipfs/go-cid"
 	logging "github.com/ipfs/go-log"
+	iface "github.com/ipfs/kubo/core/coreiface"
+	options "github.com/ipfs/kubo/core/coreiface/options"
 )
 
 func init() {

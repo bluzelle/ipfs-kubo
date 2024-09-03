@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
-	"github.com/bluzelle/ipfs-kubo/core/commands/e"
-	"github.com/bluzelle/ipfs-kubo/profile"
+	cmds "github.com/ipfs/go-ipfs-cmds"
+	"github.com/ipfs/kubo/core/commands/e"
+	"github.com/ipfs/kubo/profile"
 )
 
 // time format that works in filenames on windows.
@@ -41,7 +41,7 @@ To aid in debugging, this command also attempts to include a copy of
 the running go-ipfs binary.
 
 Profiles can be examined using 'go tool pprof', some tips can be found at
-https://github.com/bluzelle/ipfs-kubo/blob/master/docs/debug-guide.md.
+https://github.com/ipfs/kubo/blob/master/docs/debug-guide.md.
 
 Privacy Notice:
 
@@ -85,6 +85,7 @@ However, it could reveal:
 				profile.CollectorCPU,
 				profile.CollectorMutex,
 				profile.CollectorBlock,
+				profile.CollectorTrace,
 			}),
 		cmds.StringOption(profileTimeOption, "The amount of time spent profiling. If this is set to 0, then sampling profiles are skipped.").WithDefault("30s"),
 		cmds.IntOption(mutexProfileFractionOption, "The fraction 1/n of mutex contention events that are reported in the mutex profile.").WithDefault(4),

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/bluzelle/ipfs-kubo/repo"
+	"github.com/ipfs/kubo/repo"
 
 	ds "github.com/ipfs/go-datastore"
 	"github.com/ipfs/go-datastore/mount"

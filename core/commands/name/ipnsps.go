@@ -5,9 +5,9 @@ import (
 	"io"
 	"strings"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	ke "github.com/bluzelle/ipfs-kubo/core/commands/keyencode"
+	cmds "github.com/ipfs/go-ipfs-cmds"
+	"github.com/ipfs/kubo/core/commands/cmdenv"
+	ke "github.com/ipfs/kubo/core/commands/keyencode"
 	record "github.com/libp2p/go-libp2p-record"
 	"github.com/libp2p/go-libp2p/core/peer"
 )

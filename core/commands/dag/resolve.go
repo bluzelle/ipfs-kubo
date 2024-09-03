@@ -1,11 +1,11 @@
 package dagcmd
 
 import (
-	"github.com/bluzelle/boxo/path"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	"github.com/ipfs/boxo/path"
+	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/ipfs/kubo/core/commands/cmdutils"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 func dagResolve(req *cmds.Request, res cmds.ResponseEmitter, env cmds.Environment) error {

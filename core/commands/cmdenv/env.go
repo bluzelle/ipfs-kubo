@@ -5,13 +5,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/bluzelle/ipfs-kubo/commands"
-	"github.com/bluzelle/ipfs-kubo/core"
+	"github.com/ipfs/kubo/commands"
+	"github.com/ipfs/kubo/core"
 
-	coreiface "github.com/bluzelle/boxo/coreiface"
-	options "github.com/bluzelle/boxo/coreiface/options"
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
+	coreiface "github.com/ipfs/kubo/core/coreiface"
+	options "github.com/ipfs/kubo/core/coreiface/options"
 )
 
 var log = logging.Logger("core/commands/cmdenv")

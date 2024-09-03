@@ -5,17 +5,17 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/bluzelle/boxo/coreiface/options"
-	"github.com/bluzelle/boxo/files"
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	"github.com/ipfs/boxo/files"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
 	ipldlegacy "github.com/ipfs/go-ipld-legacy"
+	"github.com/ipfs/kubo/core/coreiface/options"
 	gocarv2 "github.com/ipld/go-car/v2"
 
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/ipfs/kubo/core/commands/cmdutils"
 )
 
 func dagImport(req *cmds.Request, res cmds.ResponseEmitter, env cmds.Environment) error {
@@ -152,7 +152,7 @@ func dagImport(req *cmds.Request, res cmds.ResponseEmitter, env cmds.Environment
 				ret.PinErrorMsg = err.Error()
 			} else if nd, err := blockDecoder.DecodeNode(req.Context, block); err != nil {
 				ret.PinErrorMsg = err.Error()
-			} else if err := node.Pinning.Pin(req.Context, nd, true); err != nil {
+			} else if err := node.Pinning.Pin(req.Context, nd, true, ""); err != nil {
 				ret.PinErrorMsg = err.Error()
 			} else if err := node.Pinning.Flush(req.Context); err != nil {
 				ret.PinErrorMsg = err.Error()

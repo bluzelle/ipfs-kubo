@@ -7,8 +7,8 @@ import (
 	"sort"
 	"time"
 
-	offroute "github.com/bluzelle/boxo/routing/offline"
 	"github.com/cenkalti/backoff/v4"
+	offroute "github.com/ipfs/boxo/routing/offline"
 	ds "github.com/ipfs/go-datastore"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	ddht "github.com/libp2p/go-libp2p-kad-dht/dual"
@@ -22,10 +22,10 @@ import (
 	"github.com/libp2p/go-libp2p/core/routing"
 	"go.uber.org/fx"
 
-	config "github.com/bluzelle/ipfs-kubo/config"
-	"github.com/bluzelle/ipfs-kubo/core/node/helpers"
-	"github.com/bluzelle/ipfs-kubo/repo"
-	irouting "github.com/bluzelle/ipfs-kubo/routing"
+	config "github.com/ipfs/kubo/config"
+	"github.com/ipfs/kubo/core/node/helpers"
+	"github.com/ipfs/kubo/repo"
+	irouting "github.com/ipfs/kubo/routing"
 )
 
 type Router struct {
@@ -90,7 +90,7 @@ func BaseRouting(cfg *config.Config) interface{} {
 			}
 		}
 
-		if dualDHT != nil && cfg.Routing.AcceleratedDHTClient {
+		if dualDHT != nil && cfg.Routing.AcceleratedDHTClient.WithDefault(config.DefaultAcceleratedDHTClient) {
 			cfg, err := in.Repo.Config()
 			if err != nil {
 				return out, err

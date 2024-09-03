@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	logging "github.com/ipfs/go-log"
 	lwriter "github.com/ipfs/go-log/writer"
 )
@@ -111,7 +111,7 @@ var logTailCmd = &cmds.Command{
 		ShortDescription: `
 Outputs event log messages (not other log messages) as they are generated.
 
-Currently broken. Follow https://github.com/bluzelle/ipfs-kubo/issues/9245 for updates.
+Currently broken. Follow https://github.com/ipfs/kubo/issues/9245 for updates.
 `,
 	},
 

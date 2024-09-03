@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"io"
 
-	iface "github.com/bluzelle/boxo/coreiface"
-	caopts "github.com/bluzelle/boxo/coreiface/options"
-	"github.com/bluzelle/boxo/ipns"
-	"github.com/bluzelle/boxo/namesys"
-	"github.com/bluzelle/boxo/path"
+	"github.com/ipfs/boxo/ipns"
+	"github.com/ipfs/boxo/namesys"
+	"github.com/ipfs/boxo/path"
+	iface "github.com/ipfs/kubo/core/coreiface"
+	caopts "github.com/ipfs/kubo/core/coreiface/options"
 )
 
 type NameAPI HttpApi

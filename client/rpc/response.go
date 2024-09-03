@@ -10,9 +10,9 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/bluzelle/boxo/files"
-	cmds "github.com/bluzelle/go-ipfs-cmds"
-	cmdhttp "github.com/bluzelle/go-ipfs-cmds/http"
+	"github.com/ipfs/boxo/files"
+	cmds "github.com/ipfs/go-ipfs-cmds"
+	cmdhttp "github.com/ipfs/go-ipfs-cmds/http"
 )
 
 type Error = cmds.Error

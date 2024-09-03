@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"io"
 
-	iface "github.com/bluzelle/boxo/coreiface"
-	caopts "github.com/bluzelle/boxo/coreiface/options"
-	"github.com/bluzelle/boxo/path"
+	"github.com/ipfs/boxo/path"
 	"github.com/ipfs/go-cid"
+	iface "github.com/ipfs/kubo/core/coreiface"
+	caopts "github.com/ipfs/kubo/core/coreiface/options"
 	mc "github.com/multiformats/go-multicodec"
 	mh "github.com/multiformats/go-multihash"
 )

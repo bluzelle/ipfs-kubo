@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/bluzelle/boxo/path"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	"github.com/ipfs/boxo/path"
 	ipldlegacy "github.com/ipfs/go-ipld-legacy"
+	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/ipfs/kubo/core/commands/cmdutils"
 
 	"github.com/ipld/go-ipld-prime"
 	"github.com/ipld/go-ipld-prime/multicodec"
 	"github.com/ipld/go-ipld-prime/traversal"
 	mc "github.com/multiformats/go-multicodec"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 func dagGet(req *cmds.Request, res cmds.ResponseEmitter, env cmds.Environment) error {

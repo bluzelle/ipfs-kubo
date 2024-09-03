@@ -4,8 +4,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/bluzelle/boxo/gateway"
-	config "github.com/bluzelle/ipfs-kubo/config"
+	"github.com/ipfs/boxo/gateway"
+	config "github.com/ipfs/kubo/config"
 	doh "github.com/libp2p/go-doh-resolver"
 	madns "github.com/multiformats/go-multiaddr-dns"
 )

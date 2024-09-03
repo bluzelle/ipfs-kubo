@@ -18,18 +18,18 @@ import (
 
 	"bazil.org/fuse"
 
-	core "github.com/bluzelle/ipfs-kubo/core"
-	coreapi "github.com/bluzelle/ipfs-kubo/core/coreapi"
-	coremock "github.com/bluzelle/ipfs-kubo/core/mock"
+	core "github.com/ipfs/kubo/core"
+	coreapi "github.com/ipfs/kubo/core/coreapi"
+	coremock "github.com/ipfs/kubo/core/mock"
 
 	fstest "bazil.org/fuse/fs/fstestutil"
-	chunker "github.com/bluzelle/boxo/chunker"
-	"github.com/bluzelle/boxo/files"
-	dag "github.com/bluzelle/boxo/ipld/merkledag"
-	importer "github.com/bluzelle/boxo/ipld/unixfs/importer"
-	uio "github.com/bluzelle/boxo/ipld/unixfs/io"
-	"github.com/bluzelle/boxo/path"
-	u "github.com/bluzelle/boxo/util"
+	chunker "github.com/ipfs/boxo/chunker"
+	"github.com/ipfs/boxo/files"
+	dag "github.com/ipfs/boxo/ipld/merkledag"
+	importer "github.com/ipfs/boxo/ipld/unixfs/importer"
+	uio "github.com/ipfs/boxo/ipld/unixfs/io"
+	"github.com/ipfs/boxo/path"
+	u "github.com/ipfs/boxo/util"
 	ipld "github.com/ipfs/go-ipld-format"
 	ci "github.com/libp2p/go-libp2p-testing/ci"
 )

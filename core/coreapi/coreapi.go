@@ -15,19 +15,20 @@ import (
 	"errors"
 	"fmt"
 
-	bserv "github.com/bluzelle/boxo/blockservice"
-	blockstore "github.com/bluzelle/boxo/blockstore"
-	coreiface "github.com/bluzelle/boxo/coreiface"
-	"github.com/bluzelle/boxo/coreiface/options"
-	exchange "github.com/bluzelle/boxo/exchange"
-	offlinexch "github.com/bluzelle/boxo/exchange/offline"
-	"github.com/bluzelle/boxo/fetcher"
-	dag "github.com/bluzelle/boxo/ipld/merkledag"
-	pathresolver "github.com/bluzelle/boxo/path/resolver"
-	pin "github.com/bluzelle/boxo/pinning/pinner"
-	provider "github.com/bluzelle/boxo/provider"
-	offlineroute "github.com/bluzelle/boxo/routing/offline"
+	bserv "github.com/ipfs/boxo/blockservice"
+	blockstore "github.com/ipfs/boxo/blockstore"
+	exchange "github.com/ipfs/boxo/exchange"
+	offlinexch "github.com/ipfs/boxo/exchange/offline"
+	"github.com/ipfs/boxo/fetcher"
+	dag "github.com/ipfs/boxo/ipld/merkledag"
+	pathresolver "github.com/ipfs/boxo/path/resolver"
+	pin "github.com/ipfs/boxo/pinning/pinner"
+	provider "github.com/ipfs/boxo/provider"
+	offlineroute "github.com/ipfs/boxo/routing/offline"
 	ipld "github.com/ipfs/go-ipld-format"
+	"github.com/ipfs/kubo/config"
+	coreiface "github.com/ipfs/kubo/core/coreiface"
+	"github.com/ipfs/kubo/core/coreiface/options"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	record "github.com/libp2p/go-libp2p-record"
 	ci "github.com/libp2p/go-libp2p/core/crypto"
@@ -37,10 +38,10 @@ import (
 	routing "github.com/libp2p/go-libp2p/core/routing"
 	madns "github.com/multiformats/go-multiaddr-dns"
 
-	"github.com/bluzelle/boxo/namesys"
-	"github.com/bluzelle/ipfs-kubo/core"
-	"github.com/bluzelle/ipfs-kubo/core/node"
-	"github.com/bluzelle/ipfs-kubo/repo"
+	"github.com/ipfs/boxo/namesys"
+	"github.com/ipfs/kubo/core"
+	"github.com/ipfs/kubo/core/node"
+	"github.com/ipfs/kubo/repo"
 )
 
 type CoreAPI struct {
@@ -127,11 +128,6 @@ func (api *CoreAPI) Object() coreiface.ObjectAPI {
 // Pin returns the PinAPI interface implementation backed by the go-ipfs node
 func (api *CoreAPI) Pin() coreiface.PinAPI {
 	return (*PinAPI)(api)
-}
-
-// Dht returns the DhtAPI interface implementation backed by the go-ipfs node
-func (api *CoreAPI) Dht() coreiface.DhtAPI {
-	return (*DhtAPI)(api)
 }
 
 // Swarm returns the SwarmAPI interface implementation backed by the go-ipfs node
@@ -225,12 +221,16 @@ func (api *CoreAPI) WithOptions(opts ...options.ApiOption) (coreiface.CoreAPI, e
 			return nil, fmt.Errorf("cannot specify negative resolve cache size")
 		}
 
-		subAPI.routing = offlineroute.NewOfflineRouter(subAPI.repo.Datastore(), subAPI.recordValidator)
-
-		subAPI.namesys, err = namesys.NewNameSystem(subAPI.routing,
+		nsOptions := []namesys.Option{
 			namesys.WithDatastore(subAPI.repo.Datastore()),
 			namesys.WithDNSResolver(subAPI.dnsResolver),
-			namesys.WithCache(cs))
+			namesys.WithCache(cs),
+			namesys.WithMaxCacheTTL(cfg.Ipns.MaxCacheTTL.WithDefault(config.DefaultIpnsMaxCacheTTL)),
+		}
+
+		subAPI.routing = offlineroute.NewOfflineRouter(subAPI.repo.Datastore(), subAPI.recordValidator)
+
+		subAPI.namesys, err = namesys.NewNameSystem(subAPI.routing, nsOptions...)
 		if err != nil {
 			return nil, fmt.Errorf("error constructing namesys: %w", err)
 		}

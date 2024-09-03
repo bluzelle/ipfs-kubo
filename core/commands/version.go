@@ -6,9 +6,9 @@ import (
 	"io"
 	"runtime/debug"
 
-	version "github.com/bluzelle/ipfs-kubo"
+	version "github.com/ipfs/kubo"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 const (

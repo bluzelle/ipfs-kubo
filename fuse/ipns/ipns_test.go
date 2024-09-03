@@ -15,11 +15,11 @@ import (
 
 	"bazil.org/fuse"
 
-	core "github.com/bluzelle/ipfs-kubo/core"
-	coreapi "github.com/bluzelle/ipfs-kubo/core/coreapi"
+	core "github.com/ipfs/kubo/core"
+	coreapi "github.com/ipfs/kubo/core/coreapi"
 
 	fstest "bazil.org/fuse/fs/fstestutil"
-	u "github.com/bluzelle/boxo/util"
+	u "github.com/ipfs/boxo/util"
 	racedet "github.com/ipfs/go-detect-race"
 	ci "github.com/libp2p/go-libp2p-testing/ci"
 )

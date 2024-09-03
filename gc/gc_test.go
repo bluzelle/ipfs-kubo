@@ -4,13 +4,13 @@ import (
 	"context"
 	"testing"
 
-	"github.com/bluzelle/boxo/blockservice"
-	"github.com/bluzelle/boxo/blockstore"
-	"github.com/bluzelle/boxo/exchange/offline"
-	"github.com/bluzelle/boxo/ipld/merkledag"
-	mdutils "github.com/bluzelle/boxo/ipld/merkledag/test"
-	pin "github.com/bluzelle/boxo/pinning/pinner"
-	"github.com/bluzelle/boxo/pinning/pinner/dspinner"
+	"github.com/ipfs/boxo/blockservice"
+	"github.com/ipfs/boxo/blockstore"
+	"github.com/ipfs/boxo/exchange/offline"
+	"github.com/ipfs/boxo/ipld/merkledag"
+	mdutils "github.com/ipfs/boxo/ipld/merkledag/test"
+	pin "github.com/ipfs/boxo/pinning/pinner"
+	"github.com/ipfs/boxo/pinning/pinner/dspinner"
 	"github.com/ipfs/go-cid"
 	"github.com/ipfs/go-datastore"
 	dssync "github.com/ipfs/go-datastore/sync"
@@ -38,14 +38,14 @@ func TestGC(t *testing.T) {
 		// direct
 		root, _, err := daggen.MakeDagNode(dserv.Add, 0, 1)
 		require.NoError(t, err)
-		err = pinner.PinWithMode(ctx, root, pin.Direct)
+		err = pinner.PinWithMode(ctx, root, pin.Direct, "")
 		require.NoError(t, err)
 		expectedKept = append(expectedKept, root.Hash())
 
 		// recursive
 		root, allCids, err := daggen.MakeDagNode(dserv.Add, 5, 2)
 		require.NoError(t, err)
-		err = pinner.PinWithMode(ctx, root, pin.Recursive)
+		err = pinner.PinWithMode(ctx, root, pin.Recursive, "")
 		require.NoError(t, err)
 		expectedKept = append(expectedKept, toMHs(allCids)...)
 	}

@@ -1,6 +1,6 @@
 // Package commands implements the ipfs command interface
 //
-// Using github.com/bluzelle/ipfs-kubo/commands to define the command line and HTTP
+// Using github.com/ipfs/kubo/commands to define the command line and HTTP
 // APIs.  This is the interface available to folks using IPFS from outside of
 // the Go language.
 package commands
@@ -13,7 +13,7 @@ import (
 	"sort"
 	"strings"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 type commandEncoder struct {

@@ -11,14 +11,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
-	"github.com/bluzelle/ipfs-kubo/core/commands/e"
+	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/ipfs/kubo/core/commands/cmdutils"
+	"github.com/ipfs/kubo/core/commands/e"
 
-	"github.com/bluzelle/boxo/files"
-	"github.com/bluzelle/boxo/tar"
-	cmds "github.com/bluzelle/go-ipfs-cmds"
 	"github.com/cheggaaa/pb"
+	"github.com/ipfs/boxo/files"
+	"github.com/ipfs/boxo/tar"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 var ErrInvalidCompressionLevel = errors.New("compression level must be between 1 and 9")

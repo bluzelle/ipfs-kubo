@@ -3,16 +3,16 @@ package cmdutils
 import (
 	"fmt"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 
-	coreiface "github.com/bluzelle/boxo/coreiface"
-	"github.com/bluzelle/boxo/path"
+	"github.com/ipfs/boxo/path"
 	"github.com/ipfs/go-cid"
+	coreiface "github.com/ipfs/kubo/core/coreiface"
 )
 
 const (
 	AllowBigBlockOptionName = "allow-big-block"
-	SoftBlockLimit          = 1024 * 1024 // https://github.com/bluzelle/ipfs-kubo/issues/7421#issuecomment-910833499
+	SoftBlockLimit          = 1024 * 1024 // https://github.com/ipfs/kubo/issues/7421#issuecomment-910833499
 )
 
 var AllowBigBlockOption cmds.Option

@@ -6,17 +6,17 @@ import (
 	"errors"
 	"io"
 
-	coreiface "github.com/bluzelle/boxo/coreiface"
-	caopts "github.com/bluzelle/boxo/coreiface/options"
-	"github.com/bluzelle/boxo/path"
-	pin "github.com/bluzelle/boxo/pinning/pinner"
+	"github.com/ipfs/boxo/path"
+	pin "github.com/ipfs/boxo/pinning/pinner"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
+	coreiface "github.com/ipfs/kubo/core/coreiface"
+	caopts "github.com/ipfs/kubo/core/coreiface/options"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	util "github.com/bluzelle/ipfs-kubo/blocks/blockstoreutil"
-	"github.com/bluzelle/ipfs-kubo/tracing"
+	util "github.com/ipfs/kubo/blocks/blockstoreutil"
+	"github.com/ipfs/kubo/tracing"
 )
 
 type BlockAPI CoreAPI
@@ -60,7 +60,7 @@ func (api *BlockAPI) Put(ctx context.Context, src io.Reader, opts ...caopts.Bloc
 	}
 
 	if settings.Pin {
-		if err = api.pinning.PinWithMode(ctx, b.Cid(), pin.Recursive); err != nil {
+		if err = api.pinning.PinWithMode(ctx, b.Cid(), pin.Recursive, ""); err != nil {
 			return nil, err
 		}
 		if err := api.pinning.Flush(ctx); err != nil {

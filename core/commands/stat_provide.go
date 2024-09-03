@@ -6,10 +6,10 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/bluzelle/boxo/provider"
-	cmds "github.com/bluzelle/go-ipfs-cmds"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	humanize "github.com/dustin/go-humanize"
+	"github.com/ipfs/boxo/provider"
+	cmds "github.com/ipfs/go-ipfs-cmds"
+	"github.com/ipfs/kubo/core/commands/cmdenv"
 	"golang.org/x/exp/constraints"
 )
 

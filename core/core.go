@@ -15,18 +15,17 @@ import (
 	"io"
 	"time"
 
-	"github.com/bluzelle/boxo/filestore"
-	pin "github.com/bluzelle/boxo/pinning/pinner"
+	"github.com/ipfs/boxo/filestore"
+	pin "github.com/ipfs/boxo/pinning/pinner"
 	"github.com/ipfs/go-datastore"
 
-	bserv "github.com/bluzelle/boxo/blockservice"
-	bstore "github.com/bluzelle/boxo/blockstore"
-	exchange "github.com/bluzelle/boxo/exchange"
-	"github.com/bluzelle/boxo/fetcher"
-	mfs "github.com/bluzelle/boxo/mfs"
-	pathresolver "github.com/bluzelle/boxo/path/resolver"
-	provider "github.com/bluzelle/boxo/provider"
-	"github.com/ipfs/go-graphsync"
+	bserv "github.com/ipfs/boxo/blockservice"
+	bstore "github.com/ipfs/boxo/blockstore"
+	exchange "github.com/ipfs/boxo/exchange"
+	"github.com/ipfs/boxo/fetcher"
+	mfs "github.com/ipfs/boxo/mfs"
+	pathresolver "github.com/ipfs/boxo/path/resolver"
+	provider "github.com/ipfs/boxo/provider"
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log"
 	goprocess "github.com/jbenet/goprocess"
@@ -47,17 +46,17 @@ import (
 	ma "github.com/multiformats/go-multiaddr"
 	madns "github.com/multiformats/go-multiaddr-dns"
 
-	"github.com/bluzelle/boxo/bootstrap"
-	"github.com/bluzelle/boxo/namesys"
-	ipnsrp "github.com/bluzelle/boxo/namesys/republisher"
-	"github.com/bluzelle/boxo/peering"
-	"github.com/bluzelle/ipfs-kubo/config"
-	"github.com/bluzelle/ipfs-kubo/core/node"
-	"github.com/bluzelle/ipfs-kubo/core/node/libp2p"
-	"github.com/bluzelle/ipfs-kubo/fuse/mount"
-	"github.com/bluzelle/ipfs-kubo/p2p"
-	"github.com/bluzelle/ipfs-kubo/repo"
-	irouting "github.com/bluzelle/ipfs-kubo/routing"
+	"github.com/ipfs/boxo/bootstrap"
+	"github.com/ipfs/boxo/namesys"
+	ipnsrp "github.com/ipfs/boxo/namesys/republisher"
+	"github.com/ipfs/boxo/peering"
+	"github.com/ipfs/kubo/config"
+	"github.com/ipfs/kubo/core/node"
+	"github.com/ipfs/kubo/core/node/libp2p"
+	"github.com/ipfs/kubo/fuse/mount"
+	"github.com/ipfs/kubo/p2p"
+	"github.com/ipfs/kubo/repo"
+	irouting "github.com/ipfs/kubo/routing"
 )
 
 var log = logging.Logger("core")
@@ -107,7 +106,6 @@ type IpfsNode struct {
 	Namesys                   namesys.NameSystem         // the name system, resolves paths to hashes
 	Provider                  provider.System            // the value provider system
 	IpnsRepub                 *ipnsrp.Republisher        `optional:"true"`
-	GraphExchange             graphsync.GraphExchange    `optional:"true"`
 	ResourceManager           network.ResourceManager    `optional:"true"`
 
 	PubSub   *pubsub.PubSub             `optional:"true"`

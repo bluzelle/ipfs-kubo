@@ -3,10 +3,10 @@ package ipns
 import (
 	"context"
 
-	ft "github.com/bluzelle/boxo/ipld/unixfs"
-	"github.com/bluzelle/boxo/namesys"
-	"github.com/bluzelle/boxo/path"
-	"github.com/bluzelle/ipfs-kubo/core"
+	ft "github.com/ipfs/boxo/ipld/unixfs"
+	"github.com/ipfs/boxo/namesys"
+	"github.com/ipfs/boxo/path"
+	"github.com/ipfs/kubo/core"
 	ci "github.com/libp2p/go-libp2p/core/crypto"
 )
 
@@ -18,7 +18,7 @@ func InitializeKeyspace(n *core.IpfsNode, key ci.PrivKey) error {
 
 	emptyDir := ft.EmptyDirNode()
 
-	err := n.Pinning.Pin(ctx, emptyDir, false)
+	err := n.Pinning.Pin(ctx, emptyDir, false, "")
 	if err != nil {
 		return err
 	}

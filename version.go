@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/bluzelle/ipfs-kubo/repo/fsrepo"
+	"github.com/ipfs/kubo/repo/fsrepo"
 )
 
 // CurrentCommit is the current git commit, this is set as a ldflag in the Makefile.
 var CurrentCommit string
 
 // CurrentVersionNumber is the current application's version literal.
-const CurrentVersionNumber = "0.24.0"
+const CurrentVersionNumber = "0.28.0"
 
 const ApiVersion = "/kubo/" + CurrentVersionNumber + "/" //nolint
 

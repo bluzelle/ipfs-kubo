@@ -6,15 +6,15 @@ import (
 	"fmt"
 	"time"
 
-	blockstore "github.com/bluzelle/boxo/blockstore"
-	offline "github.com/bluzelle/boxo/exchange/offline"
-	uio "github.com/bluzelle/boxo/ipld/unixfs/io"
-	util "github.com/bluzelle/boxo/util"
-	"github.com/bluzelle/ipfs-kubo/config"
-	"github.com/bluzelle/ipfs-kubo/core/node/libp2p"
-	"github.com/bluzelle/ipfs-kubo/p2p"
 	"github.com/dustin/go-humanize"
+	blockstore "github.com/ipfs/boxo/blockstore"
+	offline "github.com/ipfs/boxo/exchange/offline"
+	uio "github.com/ipfs/boxo/ipld/unixfs/io"
+	util "github.com/ipfs/boxo/util"
 	"github.com/ipfs/go-log"
+	"github.com/ipfs/kubo/config"
+	"github.com/ipfs/kubo/core/node/libp2p"
+	"github.com/ipfs/kubo/p2p"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	"github.com/libp2p/go-libp2p-pubsub/timecache"
 	"github.com/libp2p/go-libp2p/core/peer"
@@ -122,24 +122,6 @@ func LibP2P(bcfg *BuildCfg, cfg *config.Config, userResourceOverrides rcmgr.Part
 		}
 	}
 
-	// Force users to migrate old config.
-	// nolint
-	if cfg.Swarm.DisableRelay {
-		logger.Fatal("The 'Swarm.DisableRelay' config field was removed." +
-			"Use the 'Swarm.Transports.Network.Relay' instead.")
-	}
-	// nolint
-	if cfg.Swarm.EnableAutoRelay {
-		logger.Fatal("The 'Swarm.EnableAutoRelay' config field was removed." +
-			"Use the 'Swarm.RelayClient.Enabled' instead.")
-	}
-	// nolint
-	if cfg.Swarm.EnableRelayHop {
-		logger.Fatal("The `Swarm.EnableRelayHop` config field was removed.\n" +
-			"Use `Swarm.RelayService` to configure the circuit v2 relay.\n" +
-			"If you want to continue running a circuit v1 relay, please use the standalone relay daemon: https://dist.ipfs.tech/#libp2p-relay-daemon (with RelayV1.Enabled: true)")
-	}
-
 	// Gather all the options
 	opts := fx.Options(
 		BaseLibP2P,
@@ -196,7 +178,7 @@ func Storage(bcfg *BuildCfg, cfg *config.Config) fx.Option {
 	return fx.Options(
 		fx.Provide(RepoConfig),
 		fx.Provide(Datastore),
-		fx.Provide(BaseBlockstoreCtor(cacheOpts, bcfg.NilRepo, cfg.Datastore.HashOnRead)),
+		fx.Provide(BaseBlockstoreCtor(cacheOpts, cfg.Datastore.HashOnRead)),
 		finalBstore,
 	)
 }
@@ -290,9 +272,8 @@ func Online(bcfg *BuildCfg, cfg *config.Config, userResourceOverrides rcmgr.Part
 	return fx.Options(
 		fx.Provide(BitswapOptions(cfg, shouldBitswapProvide)),
 		fx.Provide(OnlineExchange()),
-		maybeProvide(Graphsync, cfg.Experimental.GraphsyncEnabled),
 		fx.Provide(DNSResolver),
-		fx.Provide(Namesys(ipnsCacheSize)),
+		fx.Provide(Namesys(ipnsCacheSize, cfg.Ipns.MaxCacheTTL.WithDefault(config.DefaultIpnsMaxCacheTTL))),
 		fx.Provide(Peering),
 		PeerWith(cfg.Peering.Peers...),
 
@@ -305,7 +286,7 @@ func Online(bcfg *BuildCfg, cfg *config.Config, userResourceOverrides rcmgr.Part
 			cfg.Experimental.StrategicProviding,
 			cfg.Reprovider.Strategy.WithDefault(config.DefaultReproviderStrategy),
 			cfg.Reprovider.Interval.WithDefault(config.DefaultReproviderInterval),
-			cfg.Routing.AcceleratedDHTClient,
+			cfg.Routing.AcceleratedDHTClient.WithDefault(config.DefaultAcceleratedDHTClient),
 		),
 	)
 }
@@ -315,7 +296,7 @@ func Offline(cfg *config.Config) fx.Option {
 	return fx.Options(
 		fx.Provide(offline.Exchange),
 		fx.Provide(DNSResolver),
-		fx.Provide(Namesys(0)),
+		fx.Provide(Namesys(0, 0)),
 		fx.Provide(libp2p.Routing),
 		fx.Provide(libp2p.ContentRouting),
 		fx.Provide(libp2p.OfflineRouting),

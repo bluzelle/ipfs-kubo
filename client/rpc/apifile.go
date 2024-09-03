@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/bluzelle/boxo/files"
-	unixfs "github.com/bluzelle/boxo/ipld/unixfs"
-	"github.com/bluzelle/boxo/path"
+	"github.com/ipfs/boxo/files"
+	unixfs "github.com/ipfs/boxo/ipld/unixfs"
+	"github.com/ipfs/boxo/path"
 	"github.com/ipfs/go-cid"
 )
 

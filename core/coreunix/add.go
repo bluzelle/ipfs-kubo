@@ -8,24 +8,24 @@ import (
 	gopath "path"
 	"strconv"
 
-	bstore "github.com/bluzelle/boxo/blockstore"
-	chunker "github.com/bluzelle/boxo/chunker"
-	coreiface "github.com/bluzelle/boxo/coreiface"
-	"github.com/bluzelle/boxo/files"
-	posinfo "github.com/bluzelle/boxo/filestore/posinfo"
-	dag "github.com/bluzelle/boxo/ipld/merkledag"
-	"github.com/bluzelle/boxo/ipld/unixfs"
-	"github.com/bluzelle/boxo/ipld/unixfs/importer/balanced"
-	ihelper "github.com/bluzelle/boxo/ipld/unixfs/importer/helpers"
-	"github.com/bluzelle/boxo/ipld/unixfs/importer/trickle"
-	"github.com/bluzelle/boxo/mfs"
-	"github.com/bluzelle/boxo/path"
-	pin "github.com/bluzelle/boxo/pinning/pinner"
+	bstore "github.com/ipfs/boxo/blockstore"
+	chunker "github.com/ipfs/boxo/chunker"
+	"github.com/ipfs/boxo/files"
+	posinfo "github.com/ipfs/boxo/filestore/posinfo"
+	dag "github.com/ipfs/boxo/ipld/merkledag"
+	"github.com/ipfs/boxo/ipld/unixfs"
+	"github.com/ipfs/boxo/ipld/unixfs/importer/balanced"
+	ihelper "github.com/ipfs/boxo/ipld/unixfs/importer/helpers"
+	"github.com/ipfs/boxo/ipld/unixfs/importer/trickle"
+	"github.com/ipfs/boxo/mfs"
+	"github.com/ipfs/boxo/path"
+	pin "github.com/ipfs/boxo/pinning/pinner"
 	"github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
 	logging "github.com/ipfs/go-log"
+	coreiface "github.com/ipfs/kubo/core/coreiface"
 
-	"github.com/bluzelle/ipfs-kubo/tracing"
+	"github.com/ipfs/kubo/tracing"
 )
 
 var log = logging.Logger("coreunix")
@@ -186,7 +186,7 @@ func (adder *Adder) PinRoot(ctx context.Context, root ipld.Node) error {
 		adder.tempRoot = rnk
 	}
 
-	err = adder.pinning.PinWithMode(ctx, rnk, pin.Recursive)
+	err = adder.pinning.PinWithMode(ctx, rnk, pin.Recursive, "")
 	if err != nil {
 		return err
 	}

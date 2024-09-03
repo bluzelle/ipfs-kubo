@@ -6,8 +6,8 @@ import (
 	"errors"
 	"fmt"
 
-	bs "github.com/bluzelle/boxo/blockstore"
-	pin "github.com/bluzelle/boxo/pinning/pinner"
+	bs "github.com/ipfs/boxo/blockstore"
+	pin "github.com/ipfs/boxo/pinning/pinner"
 	cid "github.com/ipfs/go-cid"
 	format "github.com/ipfs/go-ipld-format"
 )

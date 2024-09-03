@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/bluzelle/ipfs-kubo/plugin"
-	"github.com/bluzelle/ipfs-kubo/repo"
-	"github.com/bluzelle/ipfs-kubo/repo/fsrepo"
+	"github.com/ipfs/kubo/plugin"
+	"github.com/ipfs/kubo/repo"
+	"github.com/ipfs/kubo/repo/fsrepo"
 
 	flatfs "github.com/ipfs/go-ds-flatfs"
 )

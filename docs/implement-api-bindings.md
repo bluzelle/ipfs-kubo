@@ -28,7 +28,7 @@ handled for you by writes to the request body blocking.)
 ## API Transports
 
 Like with everything else, IPFS aims to be flexible regarding the API transports.
-Currently, the [kubo](https://github.com/bluzelle/ipfs-kubo) implementation supports
+Currently, the [kubo](https://github.com/ipfs/kubo) implementation supports
 both an in-process API and an HTTP API. More can be added easily, by mapping the
 API functions over a transport. (This is similar to how gRPC is also _mapped on
 top of transports_, like HTTP).
@@ -39,10 +39,9 @@ function calls. For example:
 #### CLI API Transport
 
 In the commandline, IPFS uses a traditional flag and arg-based mapping, where:
-- the first arguments selects the command, as in git - e.g. `ipfs object get`
+- the first arguments selects the command, as in git - e.g. `ipfs dag get`
 - the flags specify options - e.g. `--enc=protobuf -q`
-- the rest are positional arguments - e.g.
-  `ipfs object patch <hash1> add-linkfoo <hash2>`
+- the rest are positional arguments - e.g. `ipfs key rename <name> <newName>`
 - files are specified by filename, or through stdin
 
 (NOTE: When kubo runs the daemon, the CLI API is actually converted to HTTP
@@ -63,7 +62,7 @@ In HTTP, our API layering uses a REST-like mapping, where:
 
 There is a "standard IPFS API" which is currently defined as "all the commands
 exposed by the kubo implementation". There are auto-generated [API Docs](https://ipfs.io/docs/api/).
-You can Also see [a listing here](https://github.com/bluzelle/ipfs-kubo/blob/94b832df861728c65e912935641d08880c341e0a/core/commands/root.go#L96-L130), or get a list of
+You can Also see [a listing here](https://github.com/ipfs/kubo/blob/94b832df861728c65e912935641d08880c341e0a/core/commands/root.go#L96-L130), or get a list of
 commands by running `ipfs commands` locally.
 
 ## Implementing bindings for the HTTP API
@@ -86,7 +85,7 @@ implementation is very concise, and easy to follow.
 
 Despite all the generalization spoken about above, the IPFS API is actually very
 simple. You can inspect all the requests made with `nc` and the `--api` option
-(as of [this PR](https://github.com/bluzelle/ipfs-kubo/pull/1598), or `0.3.8`):
+(as of [this PR](https://github.com/ipfs/kubo/pull/1598), or `0.3.8`):
 
 ```
 > nc -l 5002 &

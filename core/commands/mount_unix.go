@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"io"
 
-	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
-	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	nodeMount "github.com/bluzelle/ipfs-kubo/fuse/node"
+	oldcmds "github.com/ipfs/kubo/commands"
+	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
+	nodeMount "github.com/ipfs/kubo/fuse/node"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
-	config "github.com/bluzelle/ipfs-kubo/config"
+	cmds "github.com/ipfs/go-ipfs-cmds"
+	config "github.com/ipfs/kubo/config"
 )
 
 const (

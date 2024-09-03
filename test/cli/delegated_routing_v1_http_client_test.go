@@ -5,9 +5,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/bluzelle/ipfs-kubo/config"
-	"github.com/bluzelle/ipfs-kubo/test/cli/harness"
-	. "github.com/bluzelle/ipfs-kubo/test/cli/testutils"
+	"github.com/ipfs/kubo/config"
+	"github.com/ipfs/kubo/test/cli/harness"
+	. "github.com/ipfs/kubo/test/cli/testutils"
 	"github.com/stretchr/testify/assert"
 )
 

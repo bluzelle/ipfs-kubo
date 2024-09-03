@@ -4,17 +4,16 @@ import (
 	"context"
 	"crypto/rand"
 	"encoding/base64"
-	"errors"
 
 	"go.uber.org/fx"
 
-	"github.com/bluzelle/ipfs-kubo/core/node/helpers"
-	"github.com/bluzelle/ipfs-kubo/core/node/libp2p"
-	"github.com/bluzelle/ipfs-kubo/repo"
+	"github.com/ipfs/kubo/core/node/helpers"
+	"github.com/ipfs/kubo/core/node/libp2p"
+	"github.com/ipfs/kubo/repo"
 
 	ds "github.com/ipfs/go-datastore"
 	dsync "github.com/ipfs/go-datastore/sync"
-	cfg "github.com/bluzelle/ipfs-kubo/config"
+	cfg "github.com/ipfs/kubo/config"
 	"github.com/libp2p/go-libp2p/core/crypto"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 )
@@ -34,9 +33,6 @@ type BuildCfg struct {
 	// DO NOT SET THIS UNLESS YOU'RE TESTING.
 	DisableEncryptedConnections bool
 
-	// If NilRepo is set, a Repo backed by a nil datastore will be constructed
-	NilRepo bool
-
 	Routing libp2p.RoutingOption
 	Host    libp2p.HostOption
 	Repo    repo.Repo
@@ -51,18 +47,8 @@ func (cfg *BuildCfg) getOpt(key string) bool {
 }
 
 func (cfg *BuildCfg) fillDefaults() error {
-	if cfg.Repo != nil && cfg.NilRepo {
-		return errors.New("cannot set a Repo and specify nilrepo at the same time")
-	}
-
 	if cfg.Repo == nil {
-		var d ds.Datastore
-		if cfg.NilRepo {
-			d = ds.NewNullDatastore()
-		} else {
-			d = ds.NewMapDatastore()
-		}
-		r, err := defaultRepo(dsync.MutexWrap(d))
+		r, err := defaultRepo(dsync.MutexWrap(ds.NewMapDatastore()))
 		if err != nil {
 			return err
 		}

@@ -6,9 +6,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/bluzelle/ipfs-kubo/config"
-	"github.com/bluzelle/ipfs-kubo/test/cli/harness"
-	"github.com/bluzelle/ipfs-kubo/test/cli/testutils"
+	"github.com/ipfs/kubo/config"
+	"github.com/ipfs/kubo/test/cli/harness"
+	"github.com/ipfs/kubo/test/cli/testutils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -69,20 +69,6 @@ func TestTransports(t *testing.T) {
 	t.Run("tcp", func(t *testing.T) {
 		t.Parallel()
 		nodes := tcpNodes(t).StartDaemons().Connect()
-		runTests(nodes)
-	})
-
-	t.Run("tcp with mplex", func(t *testing.T) {
-		// FIXME(#10069): we don't want this to exists anymore
-		t.Parallel()
-		nodes := tcpNodes(t)
-		nodes.ForEachPar(func(n *harness.Node) {
-			n.UpdateConfig(func(cfg *config.Config) {
-				cfg.Swarm.Transports.Multiplexers.Yamux = config.Disabled
-				cfg.Swarm.Transports.Multiplexers.Mplex = 200
-			})
-		})
-		nodes.StartDaemons().Connect()
 		runTests(nodes)
 	})
 

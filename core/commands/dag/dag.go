@@ -7,12 +7,12 @@ import (
 	"io"
 	"path"
 
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/ipfs/kubo/core/commands/cmdutils"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
 	cid "github.com/ipfs/go-cid"
 	cidenc "github.com/ipfs/go-cidutil/cidenc"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 const (

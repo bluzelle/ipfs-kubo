@@ -8,15 +8,15 @@ import (
 	"os"
 	"time"
 
-	iface "github.com/bluzelle/boxo/coreiface"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 	"github.com/cheggaaa/pb"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
+	"github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/ipfs/kubo/core/commands/cmdutils"
+	iface "github.com/ipfs/kubo/core/coreiface"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	gocar "github.com/ipld/go-car"
 	selectorparse "github.com/ipld/go-ipld-prime/traversal/selector/parse"
 )

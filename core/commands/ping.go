@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/ipfs/kubo/core/commands/cmdenv"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	pstore "github.com/libp2p/go-libp2p/core/peerstore"
 	ping "github.com/libp2p/go-libp2p/p2p/protocol/ping"

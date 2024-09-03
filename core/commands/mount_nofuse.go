@@ -4,7 +4,7 @@
 package commands
 
 import (
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 var MountCmd = &cmds.Command{

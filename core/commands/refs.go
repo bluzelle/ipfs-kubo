@@ -7,15 +7,15 @@ import (
 	"io"
 	"strings"
 
-	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
-	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
+	"github.com/ipfs/kubo/core/commands/cmdutils"
 
-	iface "github.com/bluzelle/boxo/coreiface"
-	merkledag "github.com/bluzelle/boxo/ipld/merkledag"
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	merkledag "github.com/ipfs/boxo/ipld/merkledag"
 	cid "github.com/ipfs/go-cid"
 	cidenc "github.com/ipfs/go-cidutil/cidenc"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
+	iface "github.com/ipfs/kubo/core/coreiface"
 )
 
 var refsEncoderMap = cmds.EncoderMap{

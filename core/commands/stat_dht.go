@@ -6,9 +6,9 @@ import (
 	"text/tabwriter"
 	"time"
 
-	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
 	"github.com/libp2p/go-libp2p-kad-dht/fullrt"
 	kbucket "github.com/libp2p/go-libp2p-kbucket"

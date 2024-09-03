@@ -3,7 +3,7 @@ package rpc
 import (
 	"context"
 
-	"github.com/bluzelle/boxo/path"
+	"github.com/ipfs/boxo/path"
 	cid "github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
 )

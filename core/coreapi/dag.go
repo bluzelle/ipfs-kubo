@@ -3,14 +3,14 @@ package coreapi
 import (
 	"context"
 
-	dag "github.com/bluzelle/boxo/ipld/merkledag"
-	pin "github.com/bluzelle/boxo/pinning/pinner"
+	dag "github.com/ipfs/boxo/ipld/merkledag"
+	pin "github.com/ipfs/boxo/pinning/pinner"
 	cid "github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/bluzelle/ipfs-kubo/tracing"
+	"github.com/ipfs/kubo/tracing"
 )
 
 type dagAPI struct {
@@ -30,7 +30,7 @@ func (adder *pinningAdder) Add(ctx context.Context, nd ipld.Node) error {
 		return err
 	}
 
-	if err := adder.pinning.PinWithMode(ctx, nd.Cid(), pin.Recursive); err != nil {
+	if err := adder.pinning.PinWithMode(ctx, nd.Cid(), pin.Recursive, ""); err != nil {
 		return err
 	}
 
@@ -51,7 +51,7 @@ func (adder *pinningAdder) AddMany(ctx context.Context, nds []ipld.Node) error {
 	for _, nd := range nds {
 		c := nd.Cid()
 		if cids.Visit(c) {
-			if err := adder.pinning.PinWithMode(ctx, c, pin.Recursive); err != nil {
+			if err := adder.pinning.PinWithMode(ctx, c, pin.Recursive, ""); err != nil {
 				return err
 			}
 		}

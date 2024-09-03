@@ -7,9 +7,9 @@ import (
 	"text/tabwriter"
 	"time"
 
-	oldcmds "github.com/bluzelle/ipfs-kubo/commands"
+	oldcmds "github.com/ipfs/kubo/commands"
 
-	cmds "github.com/bluzelle/go-ipfs-cmds"
+	cmds "github.com/ipfs/go-ipfs-cmds"
 )
 
 const (
