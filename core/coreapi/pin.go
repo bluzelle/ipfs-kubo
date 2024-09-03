@@ -4,18 +4,18 @@ import (
 	"context"
 	"fmt"
 
+	coreiface "github.com/bluzelle/ipfs-kubo/core/coreiface"
+	caopts "github.com/bluzelle/ipfs-kubo/core/coreiface/options"
 	bserv "github.com/ipfs/boxo/blockservice"
 	offline "github.com/ipfs/boxo/exchange/offline"
 	"github.com/ipfs/boxo/ipld/merkledag"
 	"github.com/ipfs/boxo/path"
 	pin "github.com/ipfs/boxo/pinning/pinner"
 	"github.com/ipfs/go-cid"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	caopts "github.com/ipfs/kubo/core/coreiface/options"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/ipfs/kubo/tracing"
+	"github.com/bluzelle/ipfs-kubo/tracing"
 )
 
 type PinAPI CoreAPI

@@ -4,7 +4,7 @@ import (
 	"net"
 	"net/http"
 
-	core "github.com/ipfs/kubo/core"
+	core "github.com/bluzelle/ipfs-kubo/core"
 )
 
 func RedirectOption(path string, redirect string) ServeOption {

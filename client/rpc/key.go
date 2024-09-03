@@ -5,10 +5,10 @@ import (
 	"context"
 	"errors"
 
+	iface "github.com/bluzelle/ipfs-kubo/core/coreiface"
+	caopts "github.com/bluzelle/ipfs-kubo/core/coreiface/options"
 	"github.com/ipfs/boxo/ipns"
 	"github.com/ipfs/boxo/path"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	caopts "github.com/ipfs/kubo/core/coreiface/options"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/multiformats/go-multibase"
 )

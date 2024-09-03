@@ -17,9 +17,9 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/bluzelle/ipfs-kubo/config"
+	serial "github.com/bluzelle/ipfs-kubo/config/serialize"
 	logging "github.com/ipfs/go-log/v2"
-	"github.com/ipfs/kubo/config"
-	serial "github.com/ipfs/kubo/config/serialize"
 	"github.com/libp2p/go-libp2p/core/peer"
 	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
 	"github.com/multiformats/go-multiaddr"

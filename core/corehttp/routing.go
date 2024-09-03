@@ -6,13 +6,13 @@ import (
 	"net/http"
 	"time"
 
+	core "github.com/bluzelle/ipfs-kubo/core"
 	"github.com/ipfs/boxo/gateway"
 	"github.com/ipfs/boxo/ipns"
 	"github.com/ipfs/boxo/routing/http/server"
 	"github.com/ipfs/boxo/routing/http/types"
 	"github.com/ipfs/boxo/routing/http/types/iter"
 	cid "github.com/ipfs/go-cid"
-	core "github.com/ipfs/kubo/core"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/libp2p/go-libp2p/core/routing"
 )

@@ -6,8 +6,8 @@ import (
 
 	context "context"
 
-	"github.com/ipfs/kubo/core"
-	fsrepo "github.com/ipfs/kubo/repo/fsrepo"
+	"github.com/bluzelle/ipfs-kubo/core"
+	fsrepo "github.com/bluzelle/ipfs-kubo/repo/fsrepo"
 
 	humanize "github.com/dustin/go-humanize"
 )

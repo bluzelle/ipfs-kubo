@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
+	coreiface "github.com/bluzelle/ipfs-kubo/core/coreiface"
+	opt "github.com/bluzelle/ipfs-kubo/core/coreiface/options"
 	"github.com/ipfs/boxo/path"
 	ipld "github.com/ipfs/go-ipld-format"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	opt "github.com/ipfs/kubo/core/coreiface/options"
 	mh "github.com/multiformats/go-multihash"
 )
 

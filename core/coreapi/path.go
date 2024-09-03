@@ -5,16 +5,16 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/bluzelle/ipfs-kubo/tracing"
 	"github.com/ipfs/boxo/namesys"
-	"github.com/ipfs/kubo/tracing"
 
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
+	coreiface "github.com/bluzelle/ipfs-kubo/core/coreiface"
 	"github.com/ipfs/boxo/path"
 	ipfspathresolver "github.com/ipfs/boxo/path/resolver"
 	ipld "github.com/ipfs/go-ipld-format"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
 )
 
 // ResolveNode resolves the path `p` using Unixfs resolver, gets and returns the

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
+	version "github.com/bluzelle/ipfs-kubo"
 	"github.com/ipfs/boxo/tracing"
-	version "github.com/ipfs/kubo"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/sdk/resource"
 	"go.opentelemetry.io/otel/sdk/trace"

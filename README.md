@@ -12,9 +12,9 @@
   <a href="https://ipfs.tech"><img src="https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square" alt="Official Part of IPFS Project"></a>
   <a href="https://discuss.ipfs.tech"><img alt="Discourse Forum" src="https://img.shields.io/discourse/posts?server=https%3A%2F%2Fdiscuss.ipfs.tech"></a>
   <a href="https://matrix.to/#/#ipfs-space:ipfs.io"><img alt="Matrix" src="https://img.shields.io/matrix/ipfs-space%3Aipfs.io?server_fqdn=matrix.org"></a>
-  <a href="https://github.com/ipfs/kubo/actions"><img src="https://img.shields.io/github/actions/workflow/status/ipfs/kubo/build.yml?branch=master" alt="ci"></a>
-  <a href="https://github.com/ipfs/kubo/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/ipfs/kubo?filter=!*rc*"></a>
-  <a href="https://godoc.org/github.com/ipfs/kubo"><img src="https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square" alt="godoc reference"></a>  
+  <a href="https://github.com/bluzelle/ipfs-kubo/actions"><img src="https://img.shields.io/github/actions/workflow/status/ipfs/kubo/build.yml?branch=master" alt="ci"></a>
+  <a href="https://github.com/bluzelle/ipfs-kubo/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/ipfs/kubo?filter=!*rc*"></a>
+  <a href="https://godoc.org/github.com/bluzelle/ipfs-kubo"><img src="https://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square" alt="godoc reference"></a>  
 </p>
 
 <hr />
@@ -43,7 +43,7 @@ IPFS is a global, versioned, peer-to-peer filesystem. It combines good ideas fro
 For more info see: https://docs.ipfs.tech/concepts/what-is-ipfs/
 
 Before opening an issue, consider using one of the following locations to ensure you are opening your thread in the right place:
-  - kubo (previously named go-ipfs) _implementation_ bugs in [this repo](https://github.com/ipfs/kubo/issues).
+  - kubo (previously named go-ipfs) _implementation_ bugs in [this repo](https://github.com/bluzelle/ipfs-kubo/issues).
   - Documentation issues in [ipfs/docs issues](https://github.com/ipfs/ipfs-docs/issues).
   - IPFS _design_ in [ipfs/specs issues](https://github.com/ipfs/specs/issues).
   - Exploration of new ideas in [ipfs/notes issues](https://github.com/ipfs/notes/issues).
@@ -54,7 +54,7 @@ Before opening an issue, consider using one of the following locations to ensure
 
 ## Next milestones
 
-[Milestones on GitHub](https://github.com/ipfs/kubo/milestones)
+[Milestones on GitHub](https://github.com/bluzelle/ipfs-kubo/milestones)
 
 
 ## Table of Contents
@@ -124,8 +124,8 @@ Official images are published at https://hub.docker.com/r/ipfs/kubo/:
 [![Docker Image Version (latest semver)](https://img.shields.io/docker/v/ipfs/kubo?color=blue&label=kubo%20docker%20image&logo=docker&sort=semver&style=flat-square&cacheSeconds=3600)](https://hub.docker.com/r/ipfs/kubo/)
 
 - 🟢 Releases
-  - `latest` and `release` tags always point at [the latest stable release](https://github.com/ipfs/kubo/releases/latest)
-  - `vN.N.N` points at a specific [release tag](https://github.com/ipfs/kubo/releases)
+  - `latest` and `release` tags always point at [the latest stable release](https://github.com/bluzelle/ipfs-kubo/releases/latest)
+  - `vN.N.N` points at a specific [release tag](https://github.com/bluzelle/ipfs-kubo/releases)
   - These are production grade images.
 - 🟠 We also provide experimental developer builds
   - `master-latest` always points at the `HEAD` of the `master` branch
@@ -154,7 +154,7 @@ From there:
 - Move kubo (`ipfs`) to your path (`install.sh` can do it for you).
 
 If you are unable to access [dist.ipfs.tech](https://dist.ipfs.tech#kubo), you can also download kubo (go-ipfs) from:
-- this project's GitHub [releases](https://github.com/ipfs/kubo/releases/latest) page
+- this project's GitHub [releases](https://github.com/bluzelle/ipfs-kubo/releases/latest) page
 - `/ipns/dist.ipfs.tech` at [dweb.link](https://dweb.link/ipns/dist.ipfs.tech#kubo) gateway
 
 #### Updating
@@ -244,7 +244,7 @@ You can also install it through the Solus software center.
 
 #### Snap
 
-No longer supported, see rationale in [kubo#8688](https://github.com/ipfs/kubo/issues/8688).
+No longer supported, see rationale in [kubo#8688](https://github.com/bluzelle/ipfs-kubo/issues/8688).
 
 ### Unofficial Windows packages
 
@@ -253,7 +253,7 @@ No longer supported, see rationale in [kubo#8688](https://github.com/ipfs/kubo/i
 
 #### Chocolatey
 
-No longer supported, see rationale in [kubo#9341](https://github.com/ipfs/kubo/issues/9341).
+No longer supported, see rationale in [kubo#9341](https://github.com/bluzelle/ipfs-kubo/issues/9341).
 
 #### Scoop
 
@@ -326,7 +326,7 @@ export PATH=$PATH:$GOPATH/bin
 #### Download and Compile IPFS
 
 ```
-$ git clone https://github.com/ipfs/kubo.git
+$ git clone https://github.com/bluzelle/ipfs-kubo.git
 
 $ cd kubo
 $ make install
@@ -353,7 +353,7 @@ make build GOOS=myTargetOS GOARCH=myTargetArchitecture
 - If you are interested in development, please install the development
 dependencies as well.
 - Shell command completions can be generated with one of the `ipfs commands completion` subcommands. Read [docs/command-completion.md](docs/command-completion.md) to learn more.
-- See the [misc folder](https://github.com/ipfs/kubo/tree/master/misc) for how to connect IPFS to systemd or whatever init system your distro uses.
+- See the [misc folder](https://github.com/bluzelle/ipfs-kubo/tree/master/misc) for how to connect IPFS to systemd or whatever init system your distro uses.
 
 ## Getting Started
 
@@ -387,7 +387,7 @@ If you have previously installed IPFS before and you are running into problems g
 
 Please direct general questions and help requests to our [forums](https://discuss.ipfs.tech).
 
-If you believe you've found a bug, check the [issues list](https://github.com/ipfs/kubo/issues) and, if you don't see your problem there, either come talk to us on [Matrix chat](https://docs.ipfs.tech/community/chat/), or file an issue of your own!
+If you believe you've found a bug, check the [issues list](https://github.com/bluzelle/ipfs-kubo/issues) and, if you don't see your problem there, either come talk to us on [Matrix chat](https://docs.ipfs.tech/community/chat/), or file an issue of your own!
 
 ## Packages
 
@@ -397,13 +397,13 @@ See [IPFS in GO](https://docs.ipfs.tech/reference/go/api/) documentation.
 
 Some places to get you started on the codebase:
 
-- Main file: [./cmd/ipfs/main.go](https://github.com/ipfs/kubo/blob/master/cmd/ipfs/main.go)
-- CLI Commands: [./core/commands/](https://github.com/ipfs/kubo/tree/master/core/commands)
+- Main file: [./cmd/ipfs/main.go](https://github.com/bluzelle/ipfs-kubo/blob/master/cmd/ipfs/main.go)
+- CLI Commands: [./core/commands/](https://github.com/bluzelle/ipfs-kubo/tree/master/core/commands)
 - Bitswap (the data trading engine): [go-bitswap](https://github.com/ipfs/go-bitswap)
 - libp2p
   - libp2p: https://github.com/libp2p/go-libp2p
   - DHT: https://github.com/libp2p/go-libp2p-kad-dht
-- [IPFS : The `Add` command demystified](https://github.com/ipfs/kubo/tree/master/docs/add-code-flow.md)
+- [IPFS : The `Add` command demystified](https://github.com/bluzelle/ipfs-kubo/tree/master/docs/add-code-flow.md)
 
 ### Map of Implemented Subsystems
 **WIP**: This is a high-level architecture diagram of the various sub-systems of this specific implementation. To be updated with how they interact. Anyone who has suggestions is welcome to comment [here](https://docs.google.com/drawings/d/1OVpBT2q-NtSJqlPX3buvjYhOnWfdzb85YEsM_njesME/edit) on how we can improve this!
@@ -453,5 +453,5 @@ Need help with IPFS itself? Learn where to get help and support at https://ipfs.
 
 This project is dual-licensed under Apache 2.0 and MIT terms:
 
-- Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/ipfs/kubo/blob/master/LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-- MIT license ([LICENSE-MIT](https://github.com/ipfs/kubo/blob/master/LICENSE-MIT) or http://opensource.org/licenses/MIT)
+- Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/bluzelle/ipfs-kubo/blob/master/LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+- MIT license ([LICENSE-MIT](https://github.com/bluzelle/ipfs-kubo/blob/master/LICENSE-MIT) or http://opensource.org/licenses/MIT)

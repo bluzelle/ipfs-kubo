@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/ipfs/kubo/cmd/ipfs/kubo"
+	"github.com/bluzelle/ipfs-kubo/cmd/ipfs/kubo"
 )
 
 func main() {

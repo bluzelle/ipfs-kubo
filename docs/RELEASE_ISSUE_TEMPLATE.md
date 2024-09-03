@@ -1,4 +1,4 @@
-<!-- Last updated during [v0.27.0 release](https://github.com/ipfs/kubo/issues/10306) -->
+<!-- Last updated during [v0.27.0 release](https://github.com/bluzelle/ipfs-kubo/issues/10306) -->
 
 # Items to do upon creating the release issue
 
@@ -23,8 +23,8 @@
 * 🚢 Expected final release date: YYYY-MM-DD
 * Release PR: <add link once release PR is created>
 * Thunderdome PR: <add link once thunderdome PR is created>
-* Accompanying PR for improving the release process: ([example](https://github.com/ipfs/kubo/pull/9391))
-* Changelog: https://github.com/ipfs/kubo/blob/master/docs/changelogs/vX.Y.md
+* Accompanying PR for improving the release process: ([example](https://github.com/bluzelle/ipfs-kubo/pull/9391))
+* Changelog: https://github.com/bluzelle/ipfs-kubo/blob/master/docs/changelogs/vX.Y.md
 
 # Items In Scope
 

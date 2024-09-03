@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	iface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/options"
+	iface "github.com/bluzelle/ipfs-kubo/core/coreiface"
+	"github.com/bluzelle/ipfs-kubo/core/coreiface/options"
 )
 
 func (tp *TestSuite) TestPubSub(t *testing.T) {

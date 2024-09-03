@@ -9,15 +9,15 @@ import (
 	"strings"
 	"time"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
+	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 
+	iface "github.com/bluzelle/ipfs-kubo/core/coreiface"
+	"github.com/bluzelle/ipfs-kubo/core/coreiface/options"
 	dag "github.com/ipfs/boxo/ipld/merkledag"
 	"github.com/ipfs/boxo/ipns"
 	cid "github.com/ipfs/go-cid"
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	ipld "github.com/ipfs/go-ipld-format"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/options"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	routing "github.com/libp2p/go-libp2p/core/routing"
 )

@@ -10,8 +10,8 @@ import (
 	keystore "github.com/ipfs/boxo/keystore"
 	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
 
+	config "github.com/bluzelle/ipfs-kubo/config"
 	ds "github.com/ipfs/go-datastore"
-	config "github.com/ipfs/kubo/config"
 	ma "github.com/multiformats/go-multiaddr"
 )
 

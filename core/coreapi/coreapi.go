@@ -15,6 +15,9 @@ import (
 	"errors"
 	"fmt"
 
+	"github.com/bluzelle/ipfs-kubo/config"
+	coreiface "github.com/bluzelle/ipfs-kubo/core/coreiface"
+	"github.com/bluzelle/ipfs-kubo/core/coreiface/options"
 	bserv "github.com/ipfs/boxo/blockservice"
 	blockstore "github.com/ipfs/boxo/blockstore"
 	exchange "github.com/ipfs/boxo/exchange"
@@ -26,9 +29,6 @@ import (
 	provider "github.com/ipfs/boxo/provider"
 	offlineroute "github.com/ipfs/boxo/routing/offline"
 	ipld "github.com/ipfs/go-ipld-format"
-	"github.com/ipfs/kubo/config"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/options"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 	record "github.com/libp2p/go-libp2p-record"
 	ci "github.com/libp2p/go-libp2p/core/crypto"
@@ -38,10 +38,10 @@ import (
 	routing "github.com/libp2p/go-libp2p/core/routing"
 	madns "github.com/multiformats/go-multiaddr-dns"
 
+	"github.com/bluzelle/ipfs-kubo/core"
+	"github.com/bluzelle/ipfs-kubo/core/node"
+	"github.com/bluzelle/ipfs-kubo/repo"
 	"github.com/ipfs/boxo/namesys"
-	"github.com/ipfs/kubo/core"
-	"github.com/ipfs/kubo/core/node"
-	"github.com/ipfs/kubo/repo"
 )
 
 type CoreAPI struct {

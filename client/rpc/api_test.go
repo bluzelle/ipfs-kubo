@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
+	iface "github.com/bluzelle/ipfs-kubo/core/coreiface"
+	"github.com/bluzelle/ipfs-kubo/core/coreiface/tests"
+	"github.com/bluzelle/ipfs-kubo/test/cli/harness"
 	"github.com/ipfs/boxo/path"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/coreiface/tests"
-	"github.com/ipfs/kubo/test/cli/harness"
 	ma "github.com/multiformats/go-multiaddr"
 	"go.uber.org/multierr"
 )

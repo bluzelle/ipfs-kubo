@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"io"
 
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
 	cmds "github.com/ipfs/go-ipfs-cmds"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
 	peer "github.com/libp2p/go-libp2p/core/peer"
 	routing "github.com/libp2p/go-libp2p/core/routing"
 )

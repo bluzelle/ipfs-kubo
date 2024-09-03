@@ -4,19 +4,19 @@ import (
 	"context"
 	"time"
 
+	"github.com/bluzelle/ipfs-kubo/config"
+	irouting "github.com/bluzelle/ipfs-kubo/routing"
 	"github.com/ipfs/boxo/bitswap"
 	"github.com/ipfs/boxo/bitswap/network"
 	blockstore "github.com/ipfs/boxo/blockstore"
 	exchange "github.com/ipfs/boxo/exchange"
-	"github.com/ipfs/kubo/config"
-	irouting "github.com/ipfs/kubo/routing"
 	"github.com/libp2p/go-libp2p/core/host"
 	"go.uber.org/fx"
 
-	"github.com/ipfs/kubo/core/node/helpers"
+	"github.com/bluzelle/ipfs-kubo/core/node/helpers"
 )
 
-// Docs: https://github.com/ipfs/kubo/blob/master/docs/config.md#internalbitswap
+// Docs: https://github.com/bluzelle/ipfs-kubo/blob/master/docs/config.md#internalbitswap
 const (
 	DefaultEngineBlockstoreWorkerCount = 128
 	DefaultTaskWorkerCount             = 8

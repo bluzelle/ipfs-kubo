@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ipfs/kubo/thirdparty/assert"
+	"github.com/bluzelle/ipfs-kubo/thirdparty/assert"
 
+	config "github.com/bluzelle/ipfs-kubo/config"
 	datastore "github.com/ipfs/go-datastore"
-	config "github.com/ipfs/kubo/config"
 )
 
 func TestInitIdempotence(t *testing.T) {

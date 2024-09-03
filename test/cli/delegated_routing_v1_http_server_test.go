@@ -4,14 +4,14 @@ import (
 	"context"
 	"testing"
 
+	"github.com/bluzelle/ipfs-kubo/config"
+	"github.com/bluzelle/ipfs-kubo/test/cli/harness"
 	"github.com/google/uuid"
 	"github.com/ipfs/boxo/ipns"
 	"github.com/ipfs/boxo/routing/http/client"
 	"github.com/ipfs/boxo/routing/http/types"
 	"github.com/ipfs/boxo/routing/http/types/iter"
 	"github.com/ipfs/go-cid"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/test/cli/harness"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/stretchr/testify/assert"
 )

@@ -8,13 +8,13 @@ import (
 	"os"
 	"time"
 
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	iface "github.com/bluzelle/ipfs-kubo/core/coreiface"
 	"github.com/cheggaaa/pb"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
 	ipld "github.com/ipfs/go-ipld-format"
-	"github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
-	iface "github.com/ipfs/kubo/core/coreiface"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	gocar "github.com/ipld/go-car"

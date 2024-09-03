@@ -3,16 +3,16 @@ package coreapi
 import (
 	"context"
 
+	coreiface "github.com/bluzelle/ipfs-kubo/core/coreiface"
+	caopts "github.com/bluzelle/ipfs-kubo/core/coreiface/options"
 	dag "github.com/ipfs/boxo/ipld/merkledag"
 	"github.com/ipfs/boxo/ipld/merkledag/dagutils"
 	ft "github.com/ipfs/boxo/ipld/unixfs"
 	"github.com/ipfs/boxo/path"
-	coreiface "github.com/ipfs/kubo/core/coreiface"
-	caopts "github.com/ipfs/kubo/core/coreiface/options"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/ipfs/kubo/tracing"
+	"github.com/bluzelle/ipfs-kubo/tracing"
 )
 
 type ObjectAPI CoreAPI

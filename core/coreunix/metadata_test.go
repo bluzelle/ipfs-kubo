@@ -6,12 +6,12 @@ import (
 	"io"
 	"testing"
 
+	core "github.com/bluzelle/ipfs-kubo/core"
 	bserv "github.com/ipfs/boxo/blockservice"
 	merkledag "github.com/ipfs/boxo/ipld/merkledag"
 	ft "github.com/ipfs/boxo/ipld/unixfs"
 	importer "github.com/ipfs/boxo/ipld/unixfs/importer"
 	uio "github.com/ipfs/boxo/ipld/unixfs/io"
-	core "github.com/ipfs/kubo/core"
 
 	bstore "github.com/ipfs/boxo/blockstore"
 	chunker "github.com/ipfs/boxo/chunker"

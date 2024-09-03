@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
-	"github.com/ipfs/kubo/core/commands/e"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
+	"github.com/bluzelle/ipfs-kubo/core/commands/e"
 
 	"github.com/cheggaaa/pb"
 	"github.com/ipfs/boxo/files"

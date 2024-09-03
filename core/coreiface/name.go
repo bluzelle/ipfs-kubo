@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
+	"github.com/bluzelle/ipfs-kubo/core/coreiface/options"
 	"github.com/ipfs/boxo/ipns"
 	"github.com/ipfs/boxo/path"
-	"github.com/ipfs/kubo/core/coreiface/options"
 )
 
 var ErrResolveFailed = errors.New("could not resolve name")

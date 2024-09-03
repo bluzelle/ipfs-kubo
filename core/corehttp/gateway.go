@@ -9,6 +9,11 @@ import (
 	"net/http"
 	"time"
 
+	version "github.com/bluzelle/ipfs-kubo"
+	"github.com/bluzelle/ipfs-kubo/config"
+	"github.com/bluzelle/ipfs-kubo/core"
+	iface "github.com/bluzelle/ipfs-kubo/core/coreiface"
+	"github.com/bluzelle/ipfs-kubo/core/node"
 	"github.com/ipfs/boxo/blockservice"
 	"github.com/ipfs/boxo/exchange/offline"
 	"github.com/ipfs/boxo/files"
@@ -17,11 +22,6 @@ import (
 	"github.com/ipfs/boxo/path"
 	offlineroute "github.com/ipfs/boxo/routing/offline"
 	"github.com/ipfs/go-cid"
-	version "github.com/ipfs/kubo"
-	"github.com/ipfs/kubo/config"
-	"github.com/ipfs/kubo/core"
-	iface "github.com/ipfs/kubo/core/coreiface"
-	"github.com/ipfs/kubo/core/node"
 	"github.com/libp2p/go-libp2p/core/routing"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 )

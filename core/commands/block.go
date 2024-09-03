@@ -8,10 +8,10 @@ import (
 
 	"github.com/ipfs/boxo/files"
 
-	cmdenv "github.com/ipfs/kubo/core/commands/cmdenv"
-	"github.com/ipfs/kubo/core/commands/cmdutils"
+	cmdenv "github.com/bluzelle/ipfs-kubo/core/commands/cmdenv"
+	"github.com/bluzelle/ipfs-kubo/core/commands/cmdutils"
 
-	options "github.com/ipfs/kubo/core/coreiface/options"
+	options "github.com/bluzelle/ipfs-kubo/core/coreiface/options"
 
 	cmds "github.com/ipfs/go-ipfs-cmds"
 	mh "github.com/multiformats/go-multihash"
